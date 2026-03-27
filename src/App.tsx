@@ -97,7 +97,16 @@ export default function App() {
         {page === "knowledge" && (
           <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <h2>Menntun</h2>
-            <p>Tölvunarfræði - HÍ</p>
+            <ul>
+              <li>2009 Háskólinn í Reykjavík, B.Sc. í Tölvunarfræði</li>
+              <li>2007 Háskólinn í Reykjavík, Kerfisfræði</li>
+              <li>2003 Nýi Tölvu- og viðskiptaskólinn, diplóma í MCP (Microsoft Certified Professional)
+              <ul><li>
+                  MCSA (Microsoft Certified System Administrator)</li>
+                <li>
+                  MCSE (Microsoft Certified System Engineer).</li></ul></li>
+              <li>2001 Fjölbrautaskólinn í Breiðholti, stúdent.</li>
+            </ul>
             <h2>Hæfni</h2>
             <ul>
               <li>.NET / C#</li>
