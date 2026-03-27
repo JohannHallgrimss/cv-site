@@ -56,10 +56,10 @@ export default function App() {
         </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <a onClick={() => goTo("home")}>{translations[lang].home}</a>
-          <a onClick={() => goTo("knowledge")}>{translations[lang].knowledge}</a>
-          <a onClick={() => goTo("experience")}>{translations[lang].experience}</a>
-          <a onClick={() => goTo("references")}>{translations[lang].references}</a>
+          <a className={page === "home" ? "active" : ""} onClick={() => goTo("home")}>{translations[lang].home}</a>
+          <a className={page === "knowledge" ? "active" : ""} onClick={() => goTo("knowledge")}>{translations[lang].knowledge}</a>
+          <a className={page === "experience" ? "active" : ""} onClick={() => goTo("experience")}>{translations[lang].experience}</a>
+          <a className={page === "references" ? "active" : ""} onClick={() => goTo("references")}>{translations[lang].references}</a>
         </nav>
       </header>
 
@@ -95,7 +95,7 @@ export default function App() {
         )}
 
         {page === "knowledge" && (
-          <motion.div className="card" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <h2>Menntun</h2>
             <p>Tölvunarfræði - HÍ</p>
             <h2>Hæfni</h2>
@@ -113,7 +113,7 @@ export default function App() {
         )}
 
         {page === "experience" && (
-          <motion.div className="card" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <h2>Starfsreynsla</h2>
             <div className="timeline">
               <div className="timeline-item">
@@ -159,7 +159,7 @@ export default function App() {
         )}
 
         {page === "references" && (
-          <motion.div className="card" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <h2>Meðmælendur</h2>
             <p>Gunnhildur - CEO Huxun Simi: 840 4990, Email: gunnhildurarnardottir@ceohuxun.is</p>
             <p>Ingimar Andal - One Systems Simi 660 8551, Email: one@one.is</p>
