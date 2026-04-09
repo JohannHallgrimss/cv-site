@@ -29,6 +29,16 @@ nav a {
   cursor: pointer;
   font-weight: 500;
   position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:link,
+nav a:visited,
+nav a:active,
+nav a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 nav a::after {
