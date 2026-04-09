@@ -34,8 +34,8 @@ export default function App() {
         <div className="brand-row">
           <strong>Jóhann Hallgrímsson</strong>
           <div className="lang-switch">
-            <button className={lang === "is" ? "active-lang" : ""} onClick={() => changeLang("is")}>IS</button>
-            <button className={lang === "en" ? "active-lang" : ""} onClick={() => changeLang("en")}>EN</button>
+            <button className={lang === "is" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("is")}>IS</button>
+            <button className={lang === "en" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("en")}>EN</button>
           </div>
         </div>
 
