@@ -1,33 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { translations, type Language } from "./translations";
 
-type Language = "is" | "en";
 type Page = "home" | "knowledge" | "experience" | "references";
-
-type TContent = Record<Language, Record<Page | "download", string>>;
-
-const translations: TContent = {
-  is: {
-    home: "Forsíða",
-    knowledge: "Þekking",
-    experience: "Starfsreynsla",
-    references: "Meðmælendur",
-    download: "Sækja ferilskrá",
-  },
-  en: {
-    home: "Home",
-    knowledge: "Knowledge",
-    experience: "Experience",
-    references: "References",
-    download: "Download CV",
-  },
-};
 
 export default function App() {
   const [page, setPage] = useState<Page>("home");
   const [lang, setLang] = useState<Language>("is");
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = translations[lang];
 
   useEffect(() => {
     const saved = localStorage.getItem("lang") as Language | null;
@@ -49,17 +31,23 @@ export default function App() {
   return (
     <>
       <header className="header">
-        <strong>Jóhann Hallgrímsson</strong>
+        <div className="brand-row">
+          <strong>Jóhann Hallgrímsson</strong>
+          <div className="lang-switch">
+            <button className={lang === "is" ? "active-lang" : ""} onClick={() => changeLang("is")}>IS</button>
+            <button className={lang === "en" ? "active-lang" : ""} onClick={() => changeLang("en")}>EN</button>
+          </div>
+        </div>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <XMarkIcon width={28} /> : <Bars3Icon width={28} />}
         </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <a className={page === "home" ? "active" : ""} onClick={() => goTo("home")}>{translations[lang].home}</a>
-          <a className={page === "knowledge" ? "active" : ""} onClick={() => goTo("knowledge")}>{translations[lang].knowledge}</a>
-          <a className={page === "experience" ? "active" : ""} onClick={() => goTo("experience")}>{translations[lang].experience}</a>
-          <a className={page === "references" ? "active" : ""} onClick={() => goTo("references")}>{translations[lang].references}</a>
+          <a className={page === "home" ? "active" : ""} onClick={() => goTo("home")}>{t.nav.home}</a>
+          <a className={page === "knowledge" ? "active" : ""} onClick={() => goTo("knowledge")}>{t.nav.knowledge}</a>
+          <a className={page === "experience" ? "active" : ""} onClick={() => goTo("experience")}>{t.nav.experience}</a>
+          <a className={page === "references" ? "active" : ""} onClick={() => goTo("references")}>{t.nav.references}</a>
         </nav>
       </header>
 
@@ -68,22 +56,18 @@ export default function App() {
           <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
             <img src="profile.jpg" alt="Profile" className="profile" />
 
-            <h2>Persónulegar upplýsingar</h2>
-            <p>Sími: +354 611 4748</p>
-            <p>Email: joh@mi.is</p>
+            <h2>{t.home.personalTitle}</h2>
+            <p>{t.home.phone}</p>
+            <p>{t.home.email}</p>
 
-            <h2>Samantekt</h2>
-            <p>
-              Senior Full-Stack hugbúnaðarþróunarsérfræðingur með yfir 15 ára reynslu af þróun skalanlegra
-              .NET lausn. Sérhæfing í bakendaþróun, REST API hönnun, gagnagrunnum og veflausnum. Mikill áhugi á
-              gervigreind, sjálfvirknivæðingu og snjöllum lausnum.
-            </p>
+            <h2>{t.home.summaryTitle}</h2>
+            <p>{t.home.summaryText}</p>
 
             <a href="cv-is.pdf" download>
-              <button>{translations[lang].download}</button>
+              <button>{t.home.downloadCvIs}</button>
             </a>
             <a href="cv-en.pdf" download>
-              <button>Ferilsskrá á ensku</button>
+              <button>{t.home.downloadCvEn}</button>
             </a>
             <a href="https://www.linkedin.com/in/joihallgrims/" target="_blank" rel="noopener noreferrer" className="linkedin-btn">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
@@ -96,85 +80,49 @@ export default function App() {
 
         {page === "knowledge" && (
           <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-            <h2>Menntun</h2>
+            <h2>{t.knowledge.educationTitle}</h2>
             <ul>
-              <li>2009 Háskólinn í Reykjavík, B.Sc. í Tölvunarfræði</li>
-              <li>2007 Háskólinn í Reykjavík, Kerfisfræði</li>
-              <li>2003 Nýi Tölvu- og viðskiptaskólinn, diplóma í MCP (Microsoft Certified Professional)
-              <ul><li>
-                  MCSA (Microsoft Certified System Administrator)</li>
-                <li>
-                  MCSE (Microsoft Certified System Engineer).</li></ul></li>
-              <li>2001 Fjölbrautaskólinn í Breiðholti, stúdent.</li>
+              {t.knowledge.educationItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
-            <h2>Hæfni</h2>
+            <h2>{t.knowledge.skillsTitle}</h2>
             <ul>
-              <li>.NET / C#</li>
-              <li>React</li>
-              <li>SQL</li>
-              <li>Azure</li>
+              {t.knowledge.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
             </ul>
-            <p>
-              C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, JavaScript, TypeScript, HTML,
-              CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum
-            </p>
+            <p>{t.knowledge.summaryText}</p>
           </motion.div>
         )}
 
         {page === "experience" && (
           <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-            <h2>Starfsreynsla</h2>
+            <h2>{t.experience.title}</h2>
             <div className="timeline">
-              <div className="timeline-item">
-                <h3>Huxun - CEO 2025 - 2026</h3>
-                <p>Starfaði við þróun á kerfi og hliðarkerfum sem snúa að hugbúnaðar þróun á spurningalistum fyrir fyrirtæki til
-                  að kanna ánæju starfmanna. Tímabundir verkefni. Hugbúnaðarþróun í Agiel framenda og .NET Core bakenda.
-                  PostgreSQL og Entity Framework</p>
-              </div>
-              <div className="timeline-item">
-                <h3>One Systems 2017 - 2025</h3>
-                <p>CRM, integrations, Microsoft Graph.</p>
-                <ul>
-                  <li>Starfaði við þróun á CRM kerfi og hliðarkerfum sem eru í notkun hjá flestum sveitarfélögum landsins, auk
-                    nokkurra stofnanna og annarra fyrirtækja.</li>
-                  <li>Innskráning á vefi með hjálp Auðkennis og island.is.</li>
-                  <li>Undirritanir á PDF skjölum með Auðkenni.</li>
-                  <li>Senda póst (hnipp og afgreiða skjal) með pósthólfi island.is.</li>
-                  <li>MS Graph API til að sækja gögn úr Teams, Outlook, SharePoint og fleirum Microsoft lausnum.</li>
-                  <li>2015 - 2017</li>
-                  <li>Google Translate API fyrir þýðingar.</li>
-                  <li>Aspose framework fyrir vinnslu og umbreytingar á skjölum.</li>
-                  <li>Þróun á móti Nav/Ax kerfum í gegnum vefþjónustur.</li>
-                  <li>Undirbúning á skilapökkum til vörslu hjá Þjóðskjalasafni.</li>
-                  <li>Greiðslulausnir til að sjá um vefgreiðslur frá notendum.</li>
-                  <li>Auk annara almennra eða sérsmíðaðra verkefna.</li>
-                </ul>
-              </div>
-              <div className="timeline-item">
-                <h3>LS Retail 2015 - 2017</h3>
-                <p>Retail systems.</p>
-                <ul>
-                  <li>Þróun á POS (Point of Sale) kerfi, bæði LSFirst sem er WinForms kerfi skrifað í C# og í nýjum MPOS sem er Metro
-                    app skrifað í HTML með TypeScript.</li>
-                  <li>Bakenda forritun í AX Dynamics og rekstur þessara kerfa.</li>
-                  <li>Stærsta innleiðing POS kerfa í heiminum í samstarfi við Microsoft fyrir AAFES (hluti af Bandaríska hernum), ásamt
-                    þróun MPOS fyrir Jet bensínstöðvar í Evrópu og Cracker Barrel sem er veitingarhúsakeðja í Bandaríkjunum.</li>
-                  <li>Meðal verkefna var einnig tryggingakerfi skrifað inn í AX Dynamics í X++ og vefsíða í MVC .NET sem notaði
-                    auðkenningu frá Íslandslykli. Kerfið sótti efni beint í AX og vistaði með RTS þjónustu.</li>
-                </ul>
-              </div>
+              {t.experience.roles.map((role) => (
+                <div className="timeline-item" key={role.heading}>
+                  <h3>{role.heading}</h3>
+                  <p>{role.paragraph}</p>
+                  {role.bullets && (
+                    <ul>
+                      {role.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
           </motion.div>
         )}
 
         {page === "references" && (
           <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-            <h2>Meðmælendur</h2>
-            <p>Gunnhildur - CEO Huxun Simi: 840 4990, Email: gunnhildurarnardottir@ceohuxun.is</p>
-            <p>Ingimar Andal - One Systems Simi 660 8551, Email: one@one.is</p>
-            <p>Hrafnkell Erlendsson - One Systems Simi: 660 8553, Email: Hrafnkell@OneSystems.is</p>
-            <p>Eyvindur Tryggvason - LS Retail - Simi: 616 5050</p>
-            <p>Íslandspóstur - Íslandspóstur Simi:666 8777</p>
+            <h2>{t.references.title}</h2>
+            {t.references.items.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
           </motion.div>
         )}
       </div>
