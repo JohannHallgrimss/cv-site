@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HashRouter, NavLink, Routes, Route, Navigate } from "react-router-dom";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { translations, type Language } from "./translations";
-import Home from "./pages/Home";
-import Knowledge from "./pages/Knowledge";
-import Experience from "./pages/Experience";
-import References from "./pages/References";
+import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "./hooks/useTranslation";
+import { useTheme } from "./contexts/ThemeContext";
+import { createPages } from "./config/pageConfig";
 
 export default function App() {
-  const [lang, setLang] = useState<Language>("is");
   const [menuOpen, setMenuOpen] = useState(false);
-  const t = translations[lang];
-
-  useEffect(() => {
-    const saved = localStorage.getItem("lang") as Language | null;
-    if (saved === "is" || saved === "en") {
-      setLang(saved);
-    }
-  }, []);
-
-  const changeLang = (l: Language) => {
-    setLang(l);
-    localStorage.setItem("lang", l);
-  };
+  const { lang, t, changeLang } = useTranslation();
+  const { isDarkMode, toggleDarkMode } = useTheme();
+  const pages = createPages(t);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -31,9 +18,14 @@ export default function App() {
       <header className="header">
         <div className="brand-row">
           <strong>Jóhann Hallgrímsson</strong>
-          <div className="lang-switch">
-            <button className={lang === "is" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("is")}>IS</button>
-            <button className={lang === "en" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("en")}>EN</button>
+          <div className="controls">
+            <button className="theme-toggle" onClick={toggleDarkMode} title={isDarkMode ? "Light mode" : "Dark mode"}>
+              {isDarkMode ? <SunIcon width={20} /> : <MoonIcon width={20} />}
+            </button>
+        
+              <button className={lang === "is" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("is")}>IS</button>
+              <button className={lang === "en" ? "active-lang" : "inactive-lang"} onClick={() => changeLang("en")}>EN</button>
+
           </div>
         </div>
 
@@ -42,27 +34,19 @@ export default function App() {
         </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
-            {t.nav.home}
-          </NavLink>
-          <NavLink to="/knowledge" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
-            {t.nav.knowledge}
-          </NavLink>
-          <NavLink to="/experience" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
-            {t.nav.experience}
-          </NavLink>
-          <NavLink to="/references" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
-            {t.nav.references}
-          </NavLink>
+          {pages.map((page) => (
+            <NavLink key={page.id} to={page.path} end className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
+              {t.nav[page.label]}
+            </NavLink>
+          ))}
         </nav>
       </header>
 
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home t={t.home} />} />
-          <Route path="/knowledge" element={<Knowledge t={t.knowledge} />} />
-          <Route path="/experience" element={<Experience t={t.experience} />} />
-          <Route path="/references" element={<References language={lang} title={t.references.title} />} />
+          {pages.map((page) => (
+            <Route key={page.id} path={page.path} element={page.component} />
+          ))}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

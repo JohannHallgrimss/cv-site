@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import type { Language } from "../translations";
 
 type ReferencesProps = {
-  language: Language;
   title: string;
 };
 
@@ -16,7 +14,7 @@ const referenceData = {
   ],
 };
 
-export default function References({ language, title }: ReferencesProps) {
+export default function References({ title }: ReferencesProps) {
   return (
     <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
       <h2>{title}</h2>

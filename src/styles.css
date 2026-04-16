@@ -19,6 +19,12 @@ header {
   z-index: 100;
 }
 
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 /* NAV */
 nav {
   display: flex;
@@ -138,10 +144,7 @@ button:active {
         inset 0 2px 4px rgba(0,0,0,0.2),
         inset 0 -1px 2px rgba(255,255,255,0.7);
 }
-.lang-switch{
-    margin-left: 20px;
-    display: inline-block;
-}
+
 .inactive-lang {
     background: rgba(240,255,255,0.8);
     color: #103db9;
@@ -216,4 +219,147 @@ body::before {
   background: #103db9;
   color: #FFF;
 }
+
+/* CONTROLS & THEME TOGGLE */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #103db9;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background: rgba(16, 61, 185, 0.1);
+  border-radius: 8px;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* 🌙 DARK MODE */
+/* ========================= */
+:root.dark-mode {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  --header-bg: rgba(15, 23, 42, 0.8);
+  --accent-blue: #3b82f6;
+}
+
+:root:not(.dark-mode) {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+  --header-bg: rgba(240, 255, 255, 0.8);
+  --accent-blue: #2563eb;
+}
+
+/* Apply dark mode colors */
+html.dark-mode {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark-mode body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark-mode header {
+  background: var(--header-bg);
+  box-shadow: 0 6px 8px -6px rgba(59, 130, 246, 0.3);
+}
+
+html.dark-mode nav a {
+  color: inherit;
+}
+
+html.dark-mode nav a::after {
+  background: var(--accent-blue);
+}
+
+html.dark-mode .card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+html.dark-mode .card:hover {
+  background: #293548;
+}
+
+html.dark-mode .timeline {
+  border-left-color: var(--accent-blue);
+}
+
+html.dark-mode .timeline-item::before {
+  background: var(--accent-blue);
+}
+
+html.dark-mode button {
+  background: linear-gradient(to bottom, #60a5fa 0%, #3b82f6 40%, #1d4ed8 100%);
+}
+
+html.dark-mode button:hover {
+  background: linear-gradient(to bottom, #60a5fa 0%, #1d4ed8 40%, #1d4ed8 100%);
+}
+
+html.dark-mode .menu-toggle {
+  color: #60a5fa;
+}
+
+html.dark-mode .inactive-lang {
+  background: rgba(15, 23, 42, 0.8);
+  color: #60a5fa;
+}
+
+html.dark-mode .inactive-lang:hover {
+  background: rgba(15, 23, 42, 0.8);
+  color: #60a5fa;
+}
+
+html.dark-mode nav {
+  background: #1e293b;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .theme-toggle {
+  color: #60a5fa;
+}
+
+html.dark-mode .theme-toggle:hover {
+  background: rgba(96, 165, 250, 0.1);
+}
+
+html.dark-mode body::before {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent);
+}
+
+html.dark-mode a {
+  color: #60a5fa;
+}
+
+html.dark-mode a:visited {
+  color: #60a5fa;
+}
+
 
