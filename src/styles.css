@@ -73,6 +73,13 @@ nav a.active::after {
   background: none;
   border: none;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
 }
 
 /* CONTAINER */
@@ -337,8 +344,14 @@ button:active {
 /* IMAGE */
 .profile {
   width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  box-shadow: 0 0 0 1px #2563eb;
+  object-fit: cover;
+  display: block ;
 }
 
 /* BACKGROUND EFFECT */
@@ -351,40 +364,8 @@ body::before {
   z-index: -1;
 }
 
-/* ========================= */
-/* 📱 MOBILE NAVIGATION */
-/* ========================= */
-@media (max-width: 768px) {
-  /* show hamburger */
-  .menu-toggle {
-    display: block;
-    color: #103db9;
-    background: none !important;
-  }
-
-  /* hide nav by default */
-  nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    flex-direction: column;
-    background: white;
-    width: 220px;
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
-
-  /* show when open */
-  nav.open {
-    display: flex;
-  }
-
-  /* spacing inside dropdown */
-  nav a {
-    padding: 10px 0;
-  }
+.linkedin-div {
+  display: inline-block;
 }
 
 .linkedin-btn {
@@ -542,4 +523,90 @@ html.dark-mode a:visited {
   color: #60a5fa;
 }
 
+/* ========================= */
+/* 📱 MOBILE NAVIGATION */
+/* ========================= */
+@media (max-width: 768px) {
+  /* show hamburger */
+  .menu-toggle {
+    display: flex !important;
+    color: #103db9;
+    background: none !important;
+  }
+
+  /* hide desktop nav on mobile */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  /* menu backdrop overlay */
+  .menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 98;
+    cursor: pointer;
+  }
+
+  /* mobile nav */
+  .mobile-nav {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 74px);
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 99;
+    overflow-y: auto;
+  }
+
+  /* mobile nav - dark mode */
+  html.dark-mode .mobile-nav {
+    background: linear-gradient(to bottom, #1e293b 0%, #0f172a 100%);
+    border-bottom-color: #334155;
+  }
+
+  /* spacing inside dropdown */
+  .mobile-nav a {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 500;
+  }
+
+  html.dark-mode .mobile-nav a {
+    border-bottom-color: #334155;
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav a.active {
+    background: #f1f5f9;
+    color: #2563eb;
+  }
+
+  html.dark-mode .mobile-nav a.active {
+    background: #1e293b;
+    color: #3b82f6;
+  }
+  .profile {
+    width: 100px;
+    height: 100px;
+    display: contents;
+  }
+  .linkedin-btn {
+    padding:10px 0px;
+    margin-top: 10px;
+  }
+}
 

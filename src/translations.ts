@@ -128,8 +128,8 @@ export const translations: Record<Language, Translations> = {
       summaryTitle: "Summary",
       summaryText:
         "Senior Full-Stack software development specialist with over 15 years of experience building scalable .NET solutions. Expertise in backend development, REST API design, databases, and web solutions. Strong interest in AI, automation, and smart solutions.",
-      downloadCvIs: "Resume in Icelandic",
-      downloadCvEn: "Resume in English",
+      downloadCvIs: "CV in Icelandic",
+      downloadCvEn: "CV in English",
       linkedIn: "LinkedIn",
     },
     knowledge: {
