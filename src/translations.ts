@@ -35,7 +35,6 @@ export type Translations = {
   };
   references: {
     title: string;
-    items: string[];
   };
 };
 
@@ -111,13 +110,6 @@ export const translations: Record<Language, Translations> = {
     },
     references: {
       title: "Meðmælendur",
-      items: [
-        "Gunnhildur - CEO Huxun Simi: 840 4990, Email: gunnhildurarnar@ceohuxun.is",
-        "Ingimar Arndal - One Systems Simi 660 8551, Email: one@one.is",
-        "Hrafnkell Erlendsson - One Systems Simi: 660 8553, Email: Hrafnkell@OneSystems.is",
-        "Eyvindur Tryggvason - LS Retail - Simi: 616 5050",
-        "Ólafur Th Þosteinsson - Íslandspóstur Simi:666 8777",
-      ],
     },
   },
   en: {
@@ -190,13 +182,6 @@ export const translations: Record<Language, Translations> = {
     },
     references: {
       title: "References",
-      items: [
-        "Gunnhildur - CEO Huxun Phone: 840 4990, Email: gunnhildurarnar@ceohuxun.is",
-        "Ingimar Arndal - One Systems Phone 660 8551, Email: one@one.is",
-        "Hrafnkell Erlendsson - One Systems Phone: 660 8553, Email: Hrafnkell@OneSystems.is",
-        "Eyvindur Tryggvason - LS Retail - Phone: 616 5050",
-        "Ólafur Th Þosteinsson - Íslandspóstur Phone: 666 8777",
-      ],
     },
   },
 };

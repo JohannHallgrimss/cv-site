@@ -62,7 +62,7 @@ export default function App() {
           <Route path="/" element={<Home t={t.home} />} />
           <Route path="/knowledge" element={<Knowledge t={t.knowledge} />} />
           <Route path="/experience" element={<Experience t={t.experience} />} />
-          <Route path="/references" element={<References t={t.references} />} />
+          <Route path="/references" element={<References language={lang} title={t.references.title} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
