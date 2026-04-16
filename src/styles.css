@@ -127,7 +127,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
   transition: 1.6s;
-  margin: 5px;
+  margin: 1px;
   background: linear-gradient(to bottom, #4178f0 0%, #2563eb 40%, #0250f9 100%);
 }
 
