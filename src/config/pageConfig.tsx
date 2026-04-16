@@ -36,7 +36,7 @@ export function createPages(t: Translations): PageConfig[] {
       id: "references",
       path: "/references",
       label: "references",
-      component: <References title={t.references.title} />,
+      component: <References title={t.references.title} quotes={t.references.quotes} />,
     },
   ];
 }

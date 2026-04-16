@@ -35,6 +35,7 @@ export type Translations = {
   };
   references: {
     title: string;
+    quotes: string;
   };
 };
 
@@ -110,6 +111,7 @@ export const translations: Record<Language, Translations> = {
     },
     references: {
       title: "Meðmælendur",
+      quotes: "Tilvitnanir",
     },
   },
   en: {
@@ -182,6 +184,7 @@ export const translations: Record<Language, Translations> = {
     },
     references: {
       title: "References",
+      quotes: "Quotes",
     },
   },
 };
