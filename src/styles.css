@@ -73,13 +73,6 @@ nav a.active::after {
   background: none;
   border: none;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center;
 }
 
 /* CONTAINER */
@@ -232,7 +225,6 @@ html.dark-mode .reference-comment {
   content: "\201c";
   position: absolute;
   left: 0;
-  top: -8px;
   font-size: 2.5rem;
   color: #2563eb;
   opacity: 0.5;
@@ -498,8 +490,8 @@ html.dark-mode .inactive-lang:hover {
 }
 
 html.dark-mode nav {
-  background: #1e293b;
-  border: 1px solid var(--border-color);
+  /*background: #1e293b;
+  border: 1px solid var(--border-color);*/
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -529,9 +521,15 @@ html.dark-mode a:visited {
 @media (max-width: 768px) {
   /* show hamburger */
   .menu-toggle {
-    display: flex !important;
+    display: flex;
     color: #103db9;
     background: none !important;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
   }
 
   /* hide desktop nav on mobile */

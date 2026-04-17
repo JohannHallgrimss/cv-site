@@ -75,7 +75,7 @@ export default function References({ title, quotes }: ReferencesProps) {
                 className={`quote-item ${expandedQuote === item.name ? "expanded" : ""}`}
                 layout
               >
-                <button
+                <a
                   className="quote-header"
                   onClick={() => toggleQuote(item.name)}
                 >
@@ -83,7 +83,7 @@ export default function References({ title, quotes }: ReferencesProps) {
                   <ChevronDownIcon
                     className={`chevron-icon ${expandedQuote === item.name ? "rotated" : ""}`}
                   />
-                </button>
+                </a>
                 <AnimatePresence mode="wait">
                   {expandedQuote === item.name && (
                     <motion.div

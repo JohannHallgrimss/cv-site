@@ -1,10 +1,41 @@
 import { useState } from "react";
-import { HashRouter, NavLink, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, NavLink, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "./hooks/useTranslation";
 import { useTheme } from "./contexts/ThemeContext";
 import { createPages } from "./config/pageConfig";
+
+function PageRoutes() {
+  const location = useLocation();
+  const { t } = useTranslation();
+  const pages = createPages(t);
+
+  return (
+    <Routes>
+      {pages.map((page) => (
+        <Route
+          key={page.id}
+          path={page.path}
+          element={
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={location.pathname}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {page.component}
+              </motion.div>
+            </AnimatePresence>
+          }
+        />
+      ))}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,12 +116,7 @@ export default function App() {
       </header>
 
       <div className="container">
-        <Routes>
-          {pages.map((page) => (
-            <Route key={page.id} path={page.path} element={page.component} />
-          ))}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <PageRoutes />
       </div>
     </HashRouter>
   );
