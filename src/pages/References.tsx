@@ -35,7 +35,7 @@ const referenceData = {
     { 
       name: "Ólafur Th Þosteinsson - Íslandspóstur", 
       phone: "666 8777",
-      comment: ""
+      comment: "Til þess sem málið varðar: ég rita þetta til að gefa Jóhanni Hallgrímssyni mín bestu meðmæli. Jóhann starfaði með mér um árabil þegar ég gegndi stöðu forstöðumanns tölvudeildar Íslandspósts. Jóhann er vinnusamur og afar fær hugbúnaðarsmiður sem býr yfir þeim hæfileika að finna glæsilegar og hnitmiðaðar lausnir á flóknum viðfangsefnum, hvort sem hann vinnur sjálfstætt eða sem hluti af teymi. Þegar hann gerði mistök, sem við gerum öll, gekkst hann við þeim möglunarlaust. Það er ekki sjálfgefið.  Hann er mjög viðfelldinn, opinn og félagslyndur einstaklingur sem mun án efa styrkja hvaða teymi sem hann gengur til liðs við.  Það er mér sönn ánægja að gefa honum mín bestu meðmæli."
     },
   ],
 };
