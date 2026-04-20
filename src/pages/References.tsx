@@ -10,7 +10,7 @@ type ReferencesProps = {
 const referenceData = {
   items: [
     { 
-      name: "Gunnhildur - CEO Huxun", 
+      name: "Gunnhildur Arnadóttir - CEO Huxun", 
       phone: "840 4990", 
       email: "gunnhildurarnar@ceohuxun.is",
       comment: "Jóhann er einn stundvísasti og áreiðanlegasti starfsmaður sem ég hef kynnst. Hann hefur mjög þægilega nærveru, vinnur markvisst og heldur sér vel að verki."
@@ -35,7 +35,7 @@ const referenceData = {
     { 
       name: "Ólafur Th Þosteinsson - Íslandspóstur", 
       phone: "666 8777",
-      comment: "Til þess sem málið varðar: ég rita þetta til að gefa Jóhanni Hallgrímssyni mín bestu meðmæli. Jóhann starfaði með mér um árabil þegar ég gegndi stöðu forstöðumanns tölvudeildar Íslandspósts. Jóhann er vinnusamur og afar fær hugbúnaðarsmiður sem býr yfir þeim hæfileika að finna glæsilegar og hnitmiðaðar lausnir á flóknum viðfangsefnum, hvort sem hann vinnur sjálfstætt eða sem hluti af teymi. Þegar hann gerði mistök, sem við gerum öll, gekkst hann við þeim möglunarlaust. Það er ekki sjálfgefið.  Hann er mjög viðfelldinn, opinn og félagslyndur einstaklingur sem mun án efa styrkja hvaða teymi sem hann gengur til liðs við.  Það er mér sönn ánægja að gefa honum mín bestu meðmæli."
+      comment: "Til þess sem málið varðar: ég rita þetta til að gefa Jóhanni Hallgrímssyni mín bestu meðmæli. Jóhann starfaði með mér um árabil þegar ég gegndi stöðu forstöðumanns tölvudeildar Íslandspósts.\n\nJóhann er vinnusamur og afar fær hugbúnaðarsmiður sem býr yfir þeim hæfileika að finna glæsilegar og hnitmiðaðar lausnir á flóknum viðfangsefnum, hvort sem hann vinnur sjálfstætt eða sem hluti af teymi.\n\nHann er mjög viðfelldinn, opinn og félagslyndur einstaklingur sem mun án efa styrkja hvaða teymi sem hann gengur til liðs við.  Það er mér sönn ánægja að gefa honum mín bestu meðmæli."
     },
   ],
 };

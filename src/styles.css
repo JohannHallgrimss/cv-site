@@ -219,6 +219,7 @@ html.dark-mode .reference-comment {
   font-style: italic;
   position: relative;
   padding-left: 28px;
+  white-space: pre-wrap;
 }
 
 .quote-content p::before {
