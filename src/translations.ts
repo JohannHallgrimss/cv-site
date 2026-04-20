@@ -63,7 +63,7 @@ export const translations: Record<Language, Translations> = {
       educationItems: [
         "2009 Háskólinn í Reykjavík, B.Sc. í Tölvunarfræði",
         "2007 Háskólinn í Reykjavík, Kerfisfræði",
-        "2003 Nýi Tölvu- og viðskiptaskólinn, diplóma í MCP (Microsoft Certified Professional)",
+        "2003 Nýi Tölvu- og viðskiptaskólinn, diplóma í MCP (Microsoft Certified Professional) og MCSE (Microsoft Certified Systems Engineer)",
         "2001 Fjölbrautaskólinn í Breiðholti, stúdent",
       ],
       skillsTitle: "Hæfni",
@@ -81,7 +81,7 @@ export const translations: Record<Language, Translations> = {
         },
         {
           heading: "One Systems 2017 - 2025",
-          paragraph: "CRM, integrations, Microsoft Graph.",
+          paragraph: "Starfaði við OneCRM og innri og ytri gáttum tengdum því kerfi, ásamt þróun og viðhaldi á Microsoft Graph tengingum, undirritun skjala og innskráningu með Auðkenni og island.is.",
           bullets: [
             "Starfaði við þróun á CRM kerfi og hliðarkerfum sem eru í notkun hjá flestum sveitarfélögum landsins, auk nokkurra stofnanna og annarra fyrirtækja.",
             "Innskráning á vefi með hjálp Auðkennis og island.is.",
@@ -105,6 +105,32 @@ export const translations: Record<Language, Translations> = {
             "Bakenda forritun í AX Dynamics og rekstur þessara kerfa.",
             "Stærsta innleiðing POS kerfa í heiminum í samstarfi við Microsoft fyrir AAFES (hluti af Bandaríska hernum), ásamt þróun MPOS fyrir Jet bensínstöðvar í Evrópu og Cracker Barrel sem er veitingarhúsakeðja í Bandaríkjunum.",
             "Meðal verkefna var einnig tryggingakerfi skrifað inn í AX Dynamics í X++ og vefsíða í MVC .NET sem notaði auðkenningu frá Íslandslykli. Kerfið sótti efni beint í AX og vistaði með RTS þjónustu.",
+          ],
+        },
+        {
+          heading: "Five Degrees 2014 - 2016",
+          paragraph: "Vann að þróun fjármálalausna hjá Five Degrees með áherslu á vef- og samþættingarlausnir fyrir banka- og fjármálafyrirtæki.",
+          bullets: [
+            "Þróaði net- og þjónustuhliðarkerfi fyrir fjármálageirann.",
+            "Forritari bæði í Winforms banka bakenda client, auk þess að vinna við vefútgáfu að Clientinum.",
+            "Hannað og samþætt kerfi fyrir greiðslur, lán og notendastjórnun.",
+            "MVC, .NET umhverfi og vann helst við framenda vefviðmót. Í því felst líka forritun í millilagi og gagnagrunni.",
+          ],
+        },
+        {
+          heading: "Íslandspóstur 2011 - 2014",
+          paragraph: "Unnið hjá Íslandspósti við þróun og rekstur innri kerfa, netumsjón og gagnagrunnslausna sem þjónuðu póstflutningi og starfsmannavinnu.",
+          bullets: [
+            "Forritun á innanhúsverkfærum í .NET, C# WinForms og WebForms, JavaScript, jQuery og vefþjónustur, Java JSP og gagnagrunna MS SQL.",
+            "Aðstoð við þróun aðalvefs Íslandspósts aðallega í CXXL eða Umbraco netumsjónarkerfum.",
+            "Umsjón á nokkrum aðkeyptum eða open source vefum eins og actiTIME og OpenText Content Server, IIS auk Windows og Linux netþjóna.",
+            "Hönnun á gagnagrunni yfir öll póstföng á Íslandi, verkfæri á vef til að skrá eða breyta skráningum í grunninn, auk annarra aðgerða sem starfsmenn notuðu til að vinna sína vinnu, þar á meðal staðfesting á launatölum (sem krafðist aðgangsstýringar í Active Directory).",
+            "Hjálpartæki fyrir stöðvastjóra til að breyta bréfbera leiðum.",
+            "Hjálpartæki fyrir stöðvastjóra til að skrá póstsendingar í SAP þar sem SAP nýtur ekki við.",
+            "Gæðahandbók sem notaði vefþjónustur í Livelink gagnaþjónum.",
+            "Hönnun og forritun verkfæris sem skannar reikninga og flytur inn í bókhaldskerfið SAP.",
+            "Verkfæri fyrir skönnun pósts almennings fyrir Epóst (Mappan). Verkfærið skannaði strikamerki sem flokkunarvélin prentaði á umslögin til að finna réttan einstakling, þjappaði bréfum saman í zip skrá og sendi með FTP með öruggum netsamskiptum.",
+            "Verkfæri sem tók við reikningum og greiðsluseðlum frá Epóst til að strikamerkja eða OMR merkja skjöl fyrir pökkunarvél, svo réttur pappír færi í sama umslag þegar hann var prentaður.",
           ],
         },
       ],
@@ -136,8 +162,8 @@ export const translations: Record<Language, Translations> = {
       educationTitle: "Education",
       educationItems: [
         "2009 University of Reykjavík, B.Sc. in Computer Science",
-        "2007 University of Reykjavík, Systems Science",
-        "2003 New Computer and Business School, diploma in MCP (Microsoft Certified Professional)",
+        "2007 University of Reykjavík, Systems Engineering",
+        "2003 New Computer and Business School, diploma in MCP (Microsoft Certified Professional) and MCSE (Microsoft Certified Systems Engineer)",
         "2001 Breiðholt College, high school diploma",
       ],
       skillsTitle: "Skills",
@@ -155,7 +181,7 @@ export const translations: Record<Language, Translations> = {
         },
         {
           heading: "One Systems 2017 - 2025",
-          paragraph: "CRM, integrations, Microsoft Graph.",
+          paragraph: "Worked on OneCRM and internal/external portals connected to that system, along with development and maintenance of Microsoft Graph integrations, document signing, and login using Auðkenni and island.is.",
           bullets: [
             "Developed CRM systems and integration solutions used by most municipalities in Iceland, as well as several institutions and private companies.",
             "Login on websites using Auðkenni and island.is.",
@@ -178,6 +204,32 @@ export const translations: Record<Language, Translations> = {
             "Backend development in AX Dynamics and operation of those systems.",
             "Delivered the largest POS implementation in the world in collaboration with Microsoft for AAFES (part of the US military), including MPOS for Jet gas stations in Europe and Cracker Barrel restaurants in the US.",
             "Also developed insurance solutions in AX Dynamics with X++ and an MVC .NET website using Íslnadslykil authentication. The system fetched data directly from AX and stored it with RTS services.",
+          ],
+        },
+        {
+          heading: "Five Degrees 2014 - 2016",
+          paragraph: "Worked on financial software and integration solutions at Five Degrees, focusing on web and service platforms for banking and finance clients.",
+          bullets: [
+            "Developed web and service-based financial systems.",
+            "Worked with TypeScript and frontend web applications.",
+            "Designed and integrated solutions for payments, loans, and user management.",
+            "Supported customers and ensured system stability.",
+          ],
+        },
+        {
+          heading: "Íslandspóstur 2011 - 2014",
+          paragraph: "Worked at Íslandspóstur on internal systems, web management, and database solutions supporting mail operations and employee workflows.",
+          bullets: [
+            "Developed internal tools in .NET, C# WinForms and WebForms, JavaScript, jQuery, web services, Java JSP, and MS SQL databases.",
+            "Supported the main Íslandspóstur website development mainly in CXXL or Umbraco content management systems.",
+            "Managed several purchased and open-source websites such as actiTIME and OpenText Content Server, plus IIS and Windows/Linux servers.",
+            "Designed a nationwide postal address database and web tools to register or update entries, including employee tools for payroll verification requiring Active Directory access control.",
+            "Built support tools for station managers to modify mail carrier routes.",
+            "Built tools for station managers to register postal shipments in SAP where SAP was not directly supported.",
+            "Created a quality manual using web services on Livelink data servers.",
+            "Designed and implemented a tool to scan invoices and import them into the SAP accounting system.",
+            "Developed a mail scanning tool for public mail for Epóst (Mappan), scanning envelope barcodes to identify recipients, compressing processed mail into zip files, and sending them over secure FTP.",
+            "Built a tool to receive invoices and payment slips from Epóst and barcode/OMR-mark them for packaging machines so the correct paper ended up in the matching envelope after printing.",
           ],
         },
       ],

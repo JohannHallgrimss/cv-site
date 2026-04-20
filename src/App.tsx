@@ -4,12 +4,10 @@ import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/out
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "./hooks/useTranslation";
 import { useTheme } from "./contexts/ThemeContext";
-import { createPages } from "./config/pageConfig";
+import { createPages, type PageConfig } from "./config/pageConfig";
 
-function PageRoutes() {
+function PageRoutes({ pages }: { pages: PageConfig[] }) {
   const location = useLocation();
-  const { t } = useTranslation();
-  const pages = createPages(t);
 
   return (
     <Routes>
@@ -116,7 +114,7 @@ export default function App() {
       </header>
 
       <div className="container">
-        <PageRoutes />
+        <PageRoutes pages={pages} />
       </div>
     </HashRouter>
   );
