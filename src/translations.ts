@@ -77,7 +77,7 @@ export const translations: Record<Language, Translations> = {
         {
           heading: "Huxun - CEO 2025 - 2026",
           paragraph:
-            "Starfaði við þróun á kerfi og hliðarkerfum sem snúa að hugbúnaðar þróun á spurningalistum fyrir fyrirtæki til að kanna ánæju starfmanna. Tímabundir verkefni. Hugbúnaðarþróun í Agiel framenda og .NET Core bakenda. PostgreSQL og Entity Framework",
+            "Starfaði við þróun á kerfi og hliðarkerfum sem snúa að hugbúnaðarþróun á spurningalistum fyrir fyrirtæki til að kanna ánægju starfmanna. Tímabundið verkefni. Hugbúnaðarþróun í Agiel framenda og .NET Core bakenda. PostgreSQL og Entity Framework",
         },
         {
           heading: "One Systems 2017 - 2025",
@@ -93,7 +93,7 @@ export const translations: Record<Language, Translations> = {
             "Þróun á móti Nav/Ax kerfum í gegnum vefþjónustur.",
             "Undirbúning á skilapökkum til vörslu hjá Þjóðskjalasafni.",
             "Greiðslulausnir til að sjá um vefgreiðslur frá notendum.",
-            "Auk annara almennra eða sérsmíðaðra verkefna.",
+            "Auk annarra almennra eða sérsmíðaðra verkefna.",
           ],
         },
         {
@@ -101,18 +101,18 @@ export const translations: Record<Language, Translations> = {
           paragraph:
             "Retail systems.",
           bullets: [
-            "Þróun á POS (Point of Sale) kerfi, bæði LSFirst sem er WinForms kerfi skrifað í C# og í nýjum MPOS sem er Metro app skrifað í HTML með TypeScript.",
-            "Bakenda forritun í AX Dynamics og rekstur þessara kerfa.",
-            "Stærsta innleiðing POS kerfa í heiminum í samstarfi við Microsoft fyrir AAFES (hluti af Bandaríska hernum), ásamt þróun MPOS fyrir Jet bensínstöðvar í Evrópu og Cracker Barrel sem er veitingarhúsakeðja í Bandaríkjunum.",
+            "Þróun á POS (Point of Sale) kerfi, bæði LSFirst sem er WinForms kerfi skrifað í C# og þróun á nýjum MPOS sem er Metro app skrifað í HTML með TypeScript.",
+            "Bakenda forritun í AX Dynamics og rekstur þessarra kerfa.",
+            "Stærsta innleiðing POS kerfa í heiminum í samstarfi við Microsoft fyrir AAFES (hluti af Bandaríska hernum), ásamt þróun MPOS fyrir Jet bensínstöðvar í Evrópu og Cracker Barrel sem er veitingahúsakeðja í Bandaríkjunum.",
             "Meðal verkefna var einnig tryggingakerfi skrifað inn í AX Dynamics í X++ og vefsíða í MVC .NET sem notaði auðkenningu frá Íslandslykli. Kerfið sótti efni beint í AX og vistaði með RTS þjónustu.",
           ],
         },
         {
           heading: "Five Degrees 2014 - 2016",
-          paragraph: "Vann að þróun fjármálalausna hjá Five Degrees með áherslu á vef- og samþættingarlausnir fyrir banka- og fjármálafyrirtæki.",
+          paragraph: "Starfaði að þróun fjármálalausna hjá Five Degrees með áherslu á vef- og samþættingarlausnir fyrir banka- og fjármálafyrirtæki.",
           bullets: [
             "Þróaði net- og þjónustuhliðarkerfi fyrir fjármálageirann.",
-            "Forritari bæði í Winforms banka bakenda client, auk þess að vinna við vefútgáfu að Clientinum.",
+            "Forritari bæði í Winforms banka bakenda client, auk þess að starfa við vefútgáfu að Clientinum.",
             "Hannað og samþætt kerfi fyrir greiðslur, lán og notendastjórnun.",
             "MVC, .NET umhverfi og vann helst við framenda vefviðmót. Í því felst líka forritun í millilagi og gagnagrunni.",
           ],
@@ -125,7 +125,7 @@ export const translations: Record<Language, Translations> = {
             "Aðstoð við þróun aðalvefs Íslandspósts aðallega í CXXL eða Umbraco netumsjónarkerfum.",
             "Umsjón á nokkrum aðkeyptum eða open source vefum eins og actiTIME og OpenText Content Server, IIS auk Windows og Linux netþjóna.",
             "Hönnun á gagnagrunni yfir öll póstföng á Íslandi, verkfæri á vef til að skrá eða breyta skráningum í grunninn, auk annarra aðgerða sem starfsmenn notuðu til að vinna sína vinnu, þar á meðal staðfesting á launatölum (sem krafðist aðgangsstýringar í Active Directory).",
-            "Hjálpartæki fyrir stöðvastjóra til að breyta bréfbera leiðum.",
+            "Hjálpartæki fyrir stöðvastjóra til að breyta leiðum bréfbera.",
             "Hjálpartæki fyrir stöðvastjóra til að skrá póstsendingar í SAP þar sem SAP nýtur ekki við.",
             "Gæðahandbók sem notaði vefþjónustur í Livelink gagnaþjónum.",
             "Hönnun og forritun verkfæris sem skannar reikninga og flytur inn í bókhaldskerfið SAP.",
@@ -228,8 +228,8 @@ export const translations: Record<Language, Translations> = {
             "Built tools for station managers to register postal shipments in SAP where SAP was not directly supported.",
             "Created a quality manual using web services on Livelink data servers.",
             "Designed and implemented a tool to scan invoices and import them into the SAP accounting system.",
-            "Developed a mail scanning tool for public mail for Epóst (Mappan), scanning envelope barcodes to identify recipients, compressing processed mail into zip files, and sending them over secure FTP.",
-            "Built a tool to receive invoices and payment slips from Epóst and barcode/OMR-mark them for packaging machines so the correct paper ended up in the matching envelope after printing.",
+            "Developed a mail scanning tool for public mail for Epost (Mappan), scanning envelope barcodes to identify recipients, compressing processed mail into zip files, and sending them over secure FTP.",
+            "Built a tool to receive invoices and payment slips from Epost and barcode/OMR-mark them for packaging machines so the correct paper ended up in the matching envelope after printing.",
           ],
         },
       ],
