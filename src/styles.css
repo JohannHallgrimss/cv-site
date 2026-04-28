@@ -96,6 +96,56 @@ nav a.active::after {
   transform: translateY(-5px);
 }
 
+/* TOOL SECTIONS */
+.tool-section {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.tool-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #334155;
+}
+
+.tool-section input,
+.tool-section textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.tool-section .large-textarea {
+  min-height: 80px;
+  max-height: 500px;
+  overflow-y: hidden;
+}
+
+.tool-section button {
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.tool-section button:hover {
+  background: #1d4ed8;
+}
+
+.tool-section .error {
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+
 /* REFERENCE ITEM */
 .reference-item {
   margin-bottom: 24px;
@@ -454,6 +504,30 @@ html.dark-mode nav a::after {
 html.dark-mode .card {
   background: var(--card-bg);
   border-color: var(--border-color);
+}
+
+html.dark-mode .tool-section {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+html.dark-mode .tool-section h3 {
+  color: var(--text-primary);
+}
+
+html.dark-mode .tool-section input,
+html.dark-mode .tool-section textarea {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+html.dark-mode .tool-section button {
+  background: var(--accent-blue);
+}
+
+html.dark-mode .tool-section button:hover {
+  background: #2563eb;
 }
 
 html.dark-mode .card:hover {

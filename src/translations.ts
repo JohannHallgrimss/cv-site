@@ -1,5 +1,5 @@
 export type Language = "is" | "en";
-export type Page = "home" | "knowledge" | "experience" | "references";
+export type Page = "home" | "knowledge" | "experience" | "references" | "webTools";
 
 export type Translations = {
   nav: {
@@ -7,6 +7,7 @@ export type Translations = {
     knowledge: string;
     experience: string;
     references: string;
+    webTools: string;
   };
   home: {
     personalTitle: string;
@@ -37,6 +38,26 @@ export type Translations = {
     title: string;
     quotes: string;
   };
+  webTools: {
+    title: string;
+    regexTester: string;
+    jsonValidator: string;
+    dateParser: string;
+    linqDemo: string;
+    regexMatches: string;
+    regexError: string;
+    regexButton: string;
+    jsonButton: string;
+    dateButton: string;
+    dateError: string;
+    linqButton: string;
+    linqError: string;
+    jsonSucsess: string;
+    jsonError: string;
+    jsonSchemaError: string;
+    jsonFormatSchema: string;
+    jsonFormatJson: string;
+  };
 };
 
 export const translations: Record<Language, Translations> = {
@@ -46,6 +67,7 @@ export const translations: Record<Language, Translations> = {
       knowledge: "Þekking",
       experience: "Starfsreynsla",
       references: "Meðmælendur",
+      webTools: "Vef verkfæri",
     },
     home: {
       personalTitle: "Persónulegar upplýsingar",
@@ -139,6 +161,26 @@ export const translations: Record<Language, Translations> = {
       title: "Meðmælendur",
       quotes: "Tilvitnanir",
     },
+    webTools: {
+      title: "Vef verkfæri",
+      regexTester: "Regex prófari",
+      jsonValidator: "JSON schema staðfestir",
+      dateParser: "Dagsetninga þáttari",
+      linqDemo: "LINQ sýnidæmi",
+      regexMatches: "Niðurstöður",
+      regexError: "Engar samsvörun fundust.",
+      regexButton: "Keyra próf",
+      jsonButton: "Staðfesta JSON",
+      dateButton: "Framkvæma dagsetningu",
+      linqError: "Ógilt LINQ fyrirspurn.",
+      dateError: "Ógilt dagsetningarformat.",
+      linqButton: "Keyra",
+      jsonSucsess: "✅ JSON er gilt í samræmi við schema.",
+      jsonError: "❌ Staðfesting mistókst:\n",
+      jsonSchemaError: "❌ Villa í JSON schema:\n",
+      jsonFormatSchema: "Formata schema",
+      jsonFormatJson: "Formata JSON",
+    },
   },
   en: {
     nav: {
@@ -146,6 +188,7 @@ export const translations: Record<Language, Translations> = {
       knowledge: "Knowledge",
       experience: "Experience",
       references: "References",
+      webTools: "Web Tools",
     },
     home: {
       personalTitle: "Personal Information",
@@ -237,6 +280,26 @@ export const translations: Record<Language, Translations> = {
     references: {
       title: "References",
       quotes: "Quotes",
+    },
+    webTools: {
+      title: "Web Tools",
+      regexTester: "Regex Tester",
+      jsonValidator: "JSON Schema Validator",
+      dateParser: "Date Parser",
+      linqDemo: "LINQ Demo",
+      regexMatches: "Matches",
+      regexError: "No matches found.",
+      regexButton: "Run Test",
+      jsonButton: "Validate JSON",
+      dateButton: "Parse Date",
+      dateError: "Invalid date format.",
+      linqButton: "Run",
+      linqError: "Invalid LINQ query.",
+      jsonSucsess: "✅ JSON is valid according to the schema.",
+      jsonError: "❌ Validation failed:\n",
+      jsonSchemaError: "❌ Error in JSON schema:\n",
+      jsonFormatSchema: "Format Schema",
+      jsonFormatJson: "Format JSON",
     },
   },
 };

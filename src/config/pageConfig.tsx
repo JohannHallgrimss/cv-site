@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Knowledge from "../pages/Knowledge";
 import Experience from "../pages/Experience";
 import References from "../pages/References";
+import WebTools from "../pages/WebTools";
 import type { Translations } from "../translations";
 
 export type PageConfig = {
@@ -37,6 +38,12 @@ export function createPages(t: Translations): PageConfig[] {
       path: "/references",
       label: "references",
       component: <References title={t.references.title} quotes={t.references.quotes} />,
+    },
+    {
+      id: "webTools",
+      path: "/web-tools",
+      label: "webTools",
+      component: <WebTools t={t.webTools} />,
     },
   ];
 }
