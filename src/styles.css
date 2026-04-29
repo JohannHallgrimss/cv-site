@@ -623,6 +623,11 @@ html.dark-mode a:visited {
     z-index: 98;
     cursor: pointer;
   }
+  mark {
+    background: yellow;
+    padding: 0 2px;
+    border-radius: 3px;
+  }
 
   /* mobile nav */
   .mobile-nav {

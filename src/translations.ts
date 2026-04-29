@@ -57,6 +57,12 @@ export type Translations = {
     jsonSchemaError: string;
     jsonFormatSchema: string;
     jsonFormatJson: string;
+    regexGenerator: string;
+    regexGeneratorError: string;
+    regexGeneratorButton: string;
+    regexGeneratorResult: string;
+    regexGeneratorCopy: string;
+    regexGeneratorInstruction: string;
   };
 };
 
@@ -180,6 +186,12 @@ export const translations: Record<Language, Translations> = {
       jsonSchemaError: "❌ Villa í JSON schema:\n",
       jsonFormatSchema: "Formata schema",
       jsonFormatJson: "Formata JSON",
+      regexGenerator: "Utbúa regex",
+      regexGeneratorError: "❌ Villa: ",
+      regexGeneratorButton: "Keyra",
+      regexGeneratorResult: "Niðurstaða",
+      regexGeneratorCopy: "Afrita",
+      regexGeneratorInstruction: "Afritaðu texta sem þú vilt búa til regex fyrir veldu textan sem þú villt finna",
     },
   },
   en: {
@@ -300,6 +312,12 @@ export const translations: Record<Language, Translations> = {
       jsonSchemaError: "❌ Error in JSON schema:\n",
       jsonFormatSchema: "Format Schema",
       jsonFormatJson: "Format JSON",
+      regexGenerator: "Generate Regex",
+      regexGeneratorError: "❌ Error: ",
+      regexGeneratorButton: "Run",
+      regexGeneratorResult: "Result",
+      regexGeneratorCopy: "Copy",
+      regexGeneratorInstruction: "Copy the text you want to create a regex for and select the text you want to find",
     },
   },
 };
