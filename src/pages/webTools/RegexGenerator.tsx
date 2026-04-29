@@ -5,7 +5,7 @@ type Props = {
   t: Translations["webTools"];
 };
 export default function RegexGenerator({ t }: Props) {
-    const [text, setText] = useState("");
+  const [text, setText] = useState("");
   const [regex, setRegex] = useState("");
   const [selectedPreview, setSelectedPreview] = useState("");
 
@@ -105,24 +105,23 @@ export default function RegexGenerator({ t }: Props) {
       <textarea
         ref={textareaRef}
         className="large-textarea"
-        placeholder="Paste text and select part of it..."
+        placeholder={t.regexGeneratorInstruction}
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
 
       {/* Options */}
 
-      <div style={{ marginTop: "6px" }}>
-        <label>
+      <div style={{ marginTop: "6px", marginBottom: "6px" }}>
           <input
             type="checkbox"
             checked={exactMatch}
+            style={{  width: "auto" }}
             onChange={(e) =>
               setExactMatch(e.target.checked)
             }
           />
-          Exact match (^...$)
-        </label>
+          {t.regexGeneratorExaceMach}
       </div>
 
       <button onClick={generateRegex}>

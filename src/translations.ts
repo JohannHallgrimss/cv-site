@@ -63,6 +63,7 @@ export type Translations = {
     regexGeneratorResult: string;
     regexGeneratorCopy: string;
     regexGeneratorInstruction: string;
+    regexGeneratorExaceMach: string;
   };
 };
 
@@ -192,6 +193,7 @@ export const translations: Record<Language, Translations> = {
       regexGeneratorResult: "Niðurstaða",
       regexGeneratorCopy: "Afrita",
       regexGeneratorInstruction: "Afritaðu texta sem þú vilt búa til regex fyrir veldu textan sem þú villt finna",
+      regexGeneratorExaceMach: "Nákvæm samsvörun (^...$)"
     },
   },
   en: {
@@ -318,6 +320,7 @@ export const translations: Record<Language, Translations> = {
       regexGeneratorResult: "Result",
       regexGeneratorCopy: "Copy",
       regexGeneratorInstruction: "Copy the text you want to create a regex for and select the text you want to find",
+      regexGeneratorExaceMach: "Exact match (^...$)"
     },
   },
 };
