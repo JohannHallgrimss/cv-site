@@ -181,6 +181,17 @@ html.dark-mode .reference-comment {
   border-top-color: #293548;
 }
 
+html.dark-mode .accordion {
+ color: #cbd5e1;
+  box-shadow: 0 2px 4px rgba(10, 10, 128, 0.1);
+  stroke: #cbd5e1;
+}
+ html.dark-mode .accordion-arrow {
+  color: #cbd5e1;
+  box-shadow: 0 2px 4px rgba(10, 10, 128, 0.1);
+  stroke: #cbd5e1;
+}
+
 /* QUOTES SECTION */
 .quotes-section {
   margin-top: 48px;
