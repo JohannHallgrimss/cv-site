@@ -64,6 +64,15 @@ export type Translations = {
     regexGeneratorCopy: string;
     regexGeneratorInstruction: string;
     regexGeneratorExaceMach: string;
+    jsonToModel: string;
+    invalidJson: string;
+    pasteJson: string;
+    jsoncopy: string;
+    jsonModelOutput: string;
+    jsonToModelddlC: string;
+    jsonToModelddlTypeScript: string;
+    jsonToModelddlJsonSchema: string;
+    jsonToModelddlZod: string;  
   };
 };
 
@@ -193,7 +202,16 @@ export const translations: Record<Language, Translations> = {
       regexGeneratorResult: "Niðurstaða",
       regexGeneratorCopy: "Afrita",
       regexGeneratorInstruction: "Afritaðu texta sem þú vilt búa til regex fyrir veldu textan sem þú villt finna",
-      regexGeneratorExaceMach: "Nákvæm samsvörun (^...$)"
+      regexGeneratorExaceMach: "Nákvæm samsvörun (^...$)",
+      jsonToModel: "JSON í gagnalíkan",
+      invalidJson: "❌ Ógilt JSON",
+      pasteJson: "Límdu inn JSON",
+      jsoncopy: "Afrita Model í klippiborð",
+      jsonModelOutput: "Úttak úr JSON í gagnalíkan",
+      jsonToModelddlC: "C# POCO",
+      jsonToModelddlTypeScript: "TypeScript Interface",
+      jsonToModelddlJsonSchema: "JSON Schema",
+      jsonToModelddlZod: "Zod Schema"
     },
   },
   en: {
@@ -320,7 +338,16 @@ export const translations: Record<Language, Translations> = {
       regexGeneratorResult: "Result",
       regexGeneratorCopy: "Copy",
       regexGeneratorInstruction: "Copy the text you want to create a regex for and select the text you want to find",
-      regexGeneratorExaceMach: "Exact match (^...$)"
+      regexGeneratorExaceMach: "Exact match (^...$)",
+      jsonToModel: "JSON to Model",
+      invalidJson: "❌ Invalid JSON",
+      pasteJson: "Paste JSON",
+      jsoncopy: "Copy Model to Clipboard",
+      jsonModelOutput: "Output from JSON to Model",
+      jsonToModelddlC: "C# POCO",
+      jsonToModelddlTypeScript: "TypeScript Interface",
+      jsonToModelddlJsonSchema: "JSON Schema",
+      jsonToModelddlZod: "Zod Schema"
     },
   },
 };

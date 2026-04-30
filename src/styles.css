@@ -124,7 +124,7 @@ nav a.active::after {
 .tool-section .large-textarea {
   min-height: 80px;
   max-height: 500px;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .tool-section button {
@@ -190,6 +190,41 @@ html.dark-mode .accordion {
   color: #cbd5e1;
   box-shadow: 0 2px 4px rgba(10, 10, 128, 0.1);
   stroke: #cbd5e1;
+}
+.dropdown {
+  margin-top: 10px;
+  padding: 10px 36px 10px 12px; /* extra right padding for arrow */
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg stroke='%239ca3af' fill='none' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  margin-bottom: 10px;
+  min-width: 200px;
+}
+.dropdown:hover {
+  border-color: #6366f1;
+}
+
+.dropdown:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+html.dark-mode .dropdown {
+  color: #cbd5e1;
+  border-color: #475569;
+  background-color: #0f172a;
+  background-image: url("data:image/svg+xml,%3Csvg stroke='%23e5e7eb' fill='none' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 }
 
 /* QUOTES SECTION */
@@ -292,6 +327,47 @@ html.dark-mode .accordion {
   opacity: 0.5;
   font-weight: bold;
   line-height: 1;
+}
+
+.output-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  font-size: 13px;
+}
+
+/* width */
+.resizable-textarea::-webkit-scrollbar,
+.output-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* track */
+.resizable-textarea::-webkit-scrollbar-track,
+.output-box::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 8px;
+}
+
+/* thumb */
+.resizable-textarea::-webkit-scrollbar-thumb,
+.output-box::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 8px;
+}
+
+/* hover */
+.resizable-textarea::-webkit-scrollbar-thumb:hover,
+.output-box::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+.resizable-textarea,
+.output-box {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
 }
 
 /* DARK MODE - QUOTES */

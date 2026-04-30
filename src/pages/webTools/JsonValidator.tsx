@@ -28,7 +28,7 @@ function useAutoResize(maxHeight: number = 500) {
 }
 
 export default function JsonValidator({ t }: Props) {
-   const [json, setJson] = useState("");
+  const [json, setJson] = useState("");
   const [schema, setSchema] = useState("");
   const [result, setResult] = useState("");
   const { textareaRef: jsonRef, adjustHeight: adjustJsonHeight } = useAutoResize();

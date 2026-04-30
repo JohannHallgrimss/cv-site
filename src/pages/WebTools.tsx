@@ -4,6 +4,7 @@ import RegexGenerator from "./webTools/RegexGenerator";
 import JsonValidator from "./webTools/JsonValidator";
 import DateParser from "./webTools/DateParser";
 import LinqDemo from "./webTools/LinqDemo";
+import JsonToModel from "./webTools/JsonToModel";
 
 import {
   AccordionItem,
@@ -71,6 +72,13 @@ export default function WebTools({
         <LinqDemo t={t} />
       </AccordionItem>
 
+      <AccordionItem
+        title={t.jsonToModel}
+        isOpen={openIndex === 5}
+        onClick={() => toggle(5)}
+      >
+        <JsonToModel t={t} />
+      </AccordionItem>
     </motion.div>
   );
 }
