@@ -1,10 +1,11 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import type { Translations } from "../../translations";
-
+import { inferDataset, isDate} from "./JsonToModel/utils/inference";
 import { generateTypeScript } from "./JsonToModel/generators/typescriptGenerator";
 import { generateCSharp } from "./JsonToModel/generators/csharpGenerator";
 import { generateJsonSchema } from "./JsonToModel/generators/jsonSchemaGenerator";
 import { generateZod } from "./JsonToModel/generators/zodGenerator";
+import { generateJava } from "./JsonToModel/generators/javaGenerator";
 
 type Props = {
   t: Translations["webTools"];
@@ -14,7 +15,8 @@ type OutputType =
   | "typescript"
   | "csharp"
   | "jsonschema"
-  | "zod";
+  | "zod"
+  | "java";
 
 export default function JsonToModel({ t }: Props) {
 
@@ -66,6 +68,9 @@ export default function JsonToModel({ t }: Props) {
         case "zod":
           return generateZod(obj);
 
+        case "java":
+          return generateJava(obj);
+
         default:
           return "";
 
@@ -109,17 +114,18 @@ export default function JsonToModel({ t }: Props) {
         <option value="typescript">
           {t.jsonToModelddlTypeScript}
         </option>
-
         <option value="csharp">
-          {t.jsonToModelddlC}       
+          {t.jsonToModelddlC}
         </option>
-
+        <option value="java">
+          {t.jsonToModelddlJava}
+        </option>
         <option value="jsonschema">
           {t.jsonToModelddlJsonSchema}
         </option>
         <option value="zod">
           {t.jsonToModelddlZod}
-        </option>
+        </option>      
       </select>
       
       {/* OUTPUT TITLE */}

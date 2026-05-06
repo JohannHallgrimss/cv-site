@@ -73,6 +73,7 @@ export type Translations = {
     jsonToModelddlTypeScript: string;
     jsonToModelddlJsonSchema: string;
     jsonToModelddlZod: string;  
+    jsonToModelddlJava: string;
   };
 };
 
@@ -208,10 +209,12 @@ export const translations: Record<Language, Translations> = {
       pasteJson: "Límdu inn JSON",
       jsoncopy: "Afrita Model í klippiborð",
       jsonModelOutput: "Úttak úr JSON í gagnalíkan",
-      jsonToModelddlC: "C# POCO",
+      jsonToModelddlC: "C# POCO klassi",
       jsonToModelddlTypeScript: "TypeScript Interface",
       jsonToModelddlJsonSchema: "JSON Schema",
-      jsonToModelddlZod: "Zod Schema"
+      jsonToModelddlZod: "Zod Schema",
+      jsonToModelddlJava: "Java POJO klassi",
+
     },
   },
   en: {
@@ -347,7 +350,8 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlC: "C# POCO",
       jsonToModelddlTypeScript: "TypeScript Interface",
       jsonToModelddlJsonSchema: "JSON Schema",
-      jsonToModelddlZod: "Zod Schema"
+      jsonToModelddlZod: "Zod Schema",
+      jsonToModelddlJava: "POJO Java Class",
     },
   },
 };
