@@ -23,7 +23,8 @@ export default function JsonToModel({ t }: Props) {
   const [jsonText, setJsonText] = useState("");
   const [outputType, setOutputType] = useState<OutputType>("typescript");
   const { textareaRef: jsonRef, adjustHeight: adjustJsonHeight } = useAutoResize();
-
+  const [copied, setCopied] = useState(false);
+  
   const handleJsonChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setJsonText(e.target.value);
     adjustJsonHeight();
@@ -135,13 +136,26 @@ export default function JsonToModel({ t }: Props) {
       <pre className="output-box">
         {output}
       </pre>
-    {/* COPY BUTTON */}
+      {/* COPY BUTTON */}
       <button
-        onClick={() =>
-          navigator.clipboard.writeText(output)
-        }
+        className={`copy-button ${copied ? "copied" : ""}`}
+        onClick={() => {
+          const handleCopy = async () => {
+            try {
+              await navigator.clipboard.writeText(output);
+              setCopied(true);
+
+              setTimeout(() => {
+                setCopied(false);
+              }, 1500);
+
+            } catch {
+              
+            }
+          };
+        }}
       >
-        {t.jsoncopy}
+         {copied ? t.jsoncopied : t.jsoncopy}
       </button>
     </div>
   );

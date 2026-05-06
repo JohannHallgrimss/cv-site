@@ -68,6 +68,7 @@ export type Translations = {
     invalidJson: string;
     pasteJson: string;
     jsoncopy: string;
+    jsoncopied: string;
     jsonModelOutput: string;
     jsonToModelddlC: string;
     jsonToModelddlTypeScript: string;
@@ -208,6 +209,7 @@ export const translations: Record<Language, Translations> = {
       invalidJson: "❌ Ógilt JSON",
       pasteJson: "Límdu inn JSON",
       jsoncopy: "Afrita Model í klippiborð",
+      jsoncopied: "Model afritað í klippiborð",
       jsonModelOutput: "Úttak úr JSON í gagnalíkan",
       jsonToModelddlC: "C# POCO klassi",
       jsonToModelddlTypeScript: "TypeScript Interface",
@@ -346,6 +348,7 @@ export const translations: Record<Language, Translations> = {
       invalidJson: "❌ Invalid JSON",
       pasteJson: "Paste JSON",
       jsoncopy: "Copy Model to Clipboard",
+      jsoncopied: "Model copied to clipboard",
       jsonModelOutput: "Output from JSON to Model",
       jsonToModelddlC: "C# POCO",
       jsonToModelddlTypeScript: "TypeScript Interface",
