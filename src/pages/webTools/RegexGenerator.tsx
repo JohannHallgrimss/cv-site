@@ -8,6 +8,7 @@ export default function RegexGenerator({ t }: Props) {
   const [text, setText] = useState("");
   const [regex, setRegex] = useState("");
   const [selectedPreview, setSelectedPreview] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const [exactMatch, setExactMatch] = useState(false);
 
@@ -20,6 +21,8 @@ export default function RegexGenerator({ t }: Props) {
   const copyRegex = async () => {
     try {
       await navigator.clipboard.writeText(regex);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
     catch {
       alert("Copy failed");
@@ -143,21 +146,16 @@ export default function RegexGenerator({ t }: Props) {
       {/* Result */}
 
       <div>
-
         <strong>
           {t.regexGeneratorResult}:
         </strong>
         <div>
-          <pre
-            style={{
-              whiteSpace: "pre-wrap",
-              display: "inline-block",
-              marginRight: "10px",
-            }}
-          >
+          <pre className="output-box">
             {regex}
           </pre>
-          <button onClick={copyRegex}>
+          <button
+            className={`copy-button ${copied ? "copied" : ""}`}
+            onClick={copyRegex}>
             {t.regexGeneratorCopy}
           </button>
         </div>
