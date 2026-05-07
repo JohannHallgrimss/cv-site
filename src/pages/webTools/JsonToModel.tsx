@@ -1,11 +1,12 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import type { Translations } from "../../translations";
-import { inferDataset, isDate} from "./JsonToModel/utils/inference";
+import { inferDataset, isDate } from "./JsonToModel/utils/inference";
 import { generateTypeScript } from "./JsonToModel/generators/typescriptGenerator";
 import { generateCSharp } from "./JsonToModel/generators/csharpGenerator";
 import { generateJsonSchema } from "./JsonToModel/generators/jsonSchemaGenerator";
 import { generateZod } from "./JsonToModel/generators/zodGenerator";
 import { generateJava } from "./JsonToModel/generators/javaGenerator";
+import { generatePython } from "./JsonToModel/generators/pythonGenerator";
 
 type Props = {
   t: Translations["webTools"];
@@ -16,7 +17,8 @@ type OutputType =
   | "csharp"
   | "jsonschema"
   | "zod"
-  | "java";
+  | "java"
+  | "python";
 
 export default function JsonToModel({ t }: Props) {
 
@@ -24,7 +26,7 @@ export default function JsonToModel({ t }: Props) {
   const [outputType, setOutputType] = useState<OutputType>("typescript");
   const { textareaRef: jsonRef, adjustHeight: adjustJsonHeight } = useAutoResize();
   const [copied, setCopied] = useState(false);
-  
+
   const handleJsonChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setJsonText(e.target.value);
     adjustJsonHeight();
@@ -32,7 +34,7 @@ export default function JsonToModel({ t }: Props) {
 
   function useAutoResize(maxHeight: number = 500) {
     const textareaRef = useRef<HTMLTextAreaElement>(null);
-  
+
     const adjustHeight = () => {
       const textarea = textareaRef.current;
       if (textarea) {
@@ -42,11 +44,11 @@ export default function JsonToModel({ t }: Props) {
         textarea.style.overflowY = scrollHeight > maxHeight ? 'auto' : 'hidden';
       }
     };
-  
+
     useEffect(() => {
       adjustHeight();
     }, [jsonText]);
-  
+
     return { textareaRef, adjustHeight };
   }
   const output = useMemo(() => {
@@ -71,6 +73,9 @@ export default function JsonToModel({ t }: Props) {
 
         case "java":
           return generateJava(obj);
+
+        case "python":
+          return generatePython(obj);
 
         default:
           return "";
@@ -121,14 +126,17 @@ export default function JsonToModel({ t }: Props) {
         <option value="java">
           {t.jsonToModelddlJava}
         </option>
+        <option value="python">
+          Python Dataclass
+        </option>
         <option value="jsonschema">
           {t.jsonToModelddlJsonSchema}
         </option>
         <option value="zod">
           {t.jsonToModelddlZod}
-        </option>      
+        </option>
       </select>
-      
+
       {/* OUTPUT TITLE */}
       <h4>{t.jsonModelOutput}</h4>
 
@@ -140,22 +148,20 @@ export default function JsonToModel({ t }: Props) {
       <button
         className={`copy-button ${copied ? "copied" : ""}`}
         onClick={() => {
-          const handleCopy = async () => {
-            try {
-              await navigator.clipboard.writeText(output);
-              setCopied(true);
+          try {
+            navigator.clipboard.writeText(output);
+            setCopied(true);
 
-              setTimeout(() => {
-                setCopied(false);
-              }, 1500);
+            setTimeout(() => {
+              setCopied(false);
+            }, 1500);
 
-            } catch {
-              
-            }
-          };
+          } catch {
+
+          }
         }}
       >
-         {copied ? t.jsoncopied : t.jsoncopy}
+        {copied ? t.jsoncopied : t.jsoncopy}
       </button>
     </div>
   );
