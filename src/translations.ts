@@ -93,7 +93,7 @@ export const translations: Record<Language, Translations> = {
       email: "Email: joh@mi.is",
       summaryTitle: "Samantekt",
       summaryText:
-        "Senior Full-Stack hugbúnaðarþróunarsérfræðingur með yfir 15 ára reynslu af þróun skalanlegra .NET lausna. Sérhæfing í bakendaþróun, REST API hönnun, gagnagrunnum og veflausnum. Mikill áhugi á gervigreind, sjálfvirknivæðingu og snjöllum lausnum.",
+        "Senior .NET þróunarsérfræðingur með yfir 15 ára reynslu af hönnun og þróun skalanlegra hugbúnaðarkerfa. Reynsla spannar bakendaþróun, REST API hönnun, gagnagrunnslausanir, samþættingar og uppfærslu eldri .NET kerfa í nútímalegar lausnir. Hef sérstakan áhuga á sjálfvirknivæðingu, AI og lausnum sem bæta skilvirkni.",
       downloadCvIs: "Sækja ferilskrá",
       downloadCvEn: "Ferilsskrá á ensku",
       linkedIn: "LinkedIn",
