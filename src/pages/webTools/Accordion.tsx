@@ -143,5 +143,5 @@ export function useAccordion() {
 
   };
 
-  return { openIndex, toggle };
+  return { openIndex, toggle, setOpenIndex };
 }

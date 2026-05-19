@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 import RegexTester from "./webTools/RegexTester";
 import RegexGenerator from "./webTools/RegexGenerator";
 import JsonValidator from "./webTools/JsonValidator";
@@ -15,12 +17,27 @@ type WebToolsProps = {
   t: any;
 };
 
+const TOOL_INDEX_MAP: Record<string, number> = {
+  regexTester: 0,
+  regexGenerator: 1,
+  jsonValidator: 2,
+  dateParser: 3,
+  linqDemo: 4,
+  jsonToModel: 5,
+};
+
 export default function WebTools({
   t
 }: WebToolsProps) {
-
-  const { openIndex, toggle } =
-    useAccordion();
+  const [searchParams] = useSearchParams();
+  const { openIndex, toggle, setOpenIndex } = useAccordion();
+  
+  useEffect(() => {
+    const toolParam = searchParams.get("tool");
+    if (toolParam && toolParam in TOOL_INDEX_MAP) {
+      setOpenIndex(TOOL_INDEX_MAP[toolParam]);
+    }
+  }, [searchParams, setOpenIndex]);
 
   return (
 
