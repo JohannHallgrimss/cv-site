@@ -50,22 +50,54 @@ export const CONVERT_TYPES = [
         backward: (k: number) => k - 273.15
     },
     {
-        id: "Hours_Minutes",
-        label: "Hours ↔ Minutes",
-        forward: (h: number) => h * 60,
-        backward: (min: number) => min / 60
+        id: "Degrees_Radians",
+        label: "Degrees ↔ Radians",
+        forward: (deg: number) => deg * (Math.PI / 180),
+        backward: (rad: number) => rad * (180 / Math.PI)
     },
     {
-        id: "Minutes_Seconds",
-        label: "Minutes ↔ Seconds",
-        forward: (m: number) => m * 60,
-        backward: (s: number) => s / 60
+        id: "Mph_Ms",
+        label: "mph ↔ m/s",
+        forward: (mph: number) => mph * 0.44704,
+        backward: (ms: number) => ms / 0.44704
+    },
+
+    {
+        id: "Inches_Feet",
+        label: "Inches ↔ Feet",
+        forward: (inch: number) => inch / 12,
+        backward: (ft: number) => ft * 12
     },
     {
-        id: "Meters_Kilometers",
-        label: "Meters ↔ Kilometers",
-        forward: (m: number) => m / 1000,
-        backward: (km: number) => km * 1000
+        id: "Feet_Yards",
+        label: "Feet ↔ Yards",
+        forward: (ft: number) => ft / 3,
+        backward: (yd: number) => yd * 3
+    },
+    {
+        id: "Yards_Miles",
+        label: "Yards ↔ Miles",
+        forward: (yd: number) => yd / 1760,
+        backward: (mi: number) => mi * 1760
+    },
+
+    {
+        id: "Pounds_Stone",
+        label: "Pounds ↔ Stone",
+        forward: (lb: number) => lb / 14,
+        backward: (stone: number) => stone * 14
+    },
+    {
+        id: "Bytes_MB",
+        label: "Bytes ↔ MB",
+        forward: (bytes: number) => bytes / (1024 * 1024),
+        backward: (mb: number) => mb * (1024 * 1024)
+    },
+    {
+        id: "Bytes_GB",
+        label: "Bytes ↔ GB",
+        forward: (bytes: number) => bytes / (1024 * 1024 * 1024),
+        backward: (gb: number) => gb * (1024 * 1024 * 1024)
     }
 ];
 
@@ -106,7 +138,7 @@ export default function Converter({ t }: Props) {
                 }}
             />
             <select
-                style={{ width: "200px", marginRight: "12px"  }}
+                style={{ width: "200px", marginRight: "12px" }}
                 className="dropdown"
                 value={selectedType.id}
                 onChange={(e) => {
@@ -129,9 +161,9 @@ export default function Converter({ t }: Props) {
                 ))}
             </select>
             <input
-                style={{ maxWidth: "200px"}}
+                style={{ maxWidth: "200px" }}
                 type="text"
-                placeholder= {t.converterPlaceholder}
+                placeholder={t.converterPlaceholder}
                 value={value2}
                 onChange={(e) => {
                     directionRef.current = "right";
@@ -140,6 +172,5 @@ export default function Converter({ t }: Props) {
                 }}
             />
         </div>
-
     );
 }
