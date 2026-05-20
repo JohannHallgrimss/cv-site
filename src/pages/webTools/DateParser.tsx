@@ -5,7 +5,7 @@ type Props = {
   t: Translations["webTools"];
 };
 export default function DateParser({ t }: Props) {
-    const [dateString, setDateString] = useState("");
+  const [dateString, setDateString] = useState("");
   const [parsedDate, setParsedDate] = useState("");
 
   const parseDate = () => {

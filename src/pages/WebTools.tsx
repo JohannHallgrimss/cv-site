@@ -7,6 +7,7 @@ import JsonValidator from "./webTools/JsonValidator";
 import DateParser from "./webTools/DateParser";
 import LinqDemo from "./webTools/LinqDemo";
 import JsonToModel from "./webTools/JsonToModel";
+import Converter from "./webTools/Converter";
 
 import {
   AccordionItem,
@@ -24,6 +25,7 @@ const TOOL_INDEX_MAP: Record<string, number> = {
   dateParser: 3,
   linqDemo: 4,
   jsonToModel: 5,
+  converter: 6,
 };
 
 export default function WebTools({
@@ -95,6 +97,14 @@ export default function WebTools({
         onClick={() => toggle(5)}
       >
         <JsonToModel t={t} />
+      </AccordionItem>
+
+      <AccordionItem
+        title={t.converter}
+        isOpen={openIndex === 6}
+        onClick={() => toggle(6)}
+      >
+        <Converter t={t} />
       </AccordionItem>
     </motion.div>
   );

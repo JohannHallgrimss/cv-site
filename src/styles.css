@@ -232,8 +232,54 @@ html.dark-mode .nav-submenu-trigger {
   max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
+  animation: none;
+}
+/* container animation */
+
+/* Initial animation for text lines */
+/*
+.container  h1,
+.container  h2,
+.container  h3,
+.container  p,
+.container  li,
+.container  span {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeMoveUp 0.9s
+        cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.container  h1 { animation-delay: 0.1s; }
+.container  h2 { animation-delay: 0.2s; }
+.container  h3 { animation-delay: 0.25s; }
+
+.container  p:nth-of-type(1) { animation-delay: 0.3s; }
+.container  p:nth-of-type(2) { animation-delay: 0.4s; }
+.container  p:nth-of-type(3) { animation-delay: 0.5s; }
+
+.container  li:nth-child(1) { animation-delay: 0.45s; }
+.container  li:nth-child(2) { animation-delay: 0.55s; }
+.container  li:nth-child(3) { animation-delay: 0.65s; }
+.container  li:nth-child(4) { animation-delay: 0.75s; }
+
+@keyframes fadeMoveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
 /* CARD */
 .card {
   background: white;

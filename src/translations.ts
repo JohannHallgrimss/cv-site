@@ -75,6 +75,8 @@ export type Translations = {
     jsonToModelddlJsonSchema: string;
     jsonToModelddlZod: string;  
     jsonToModelddlJava: string;
+    converter: string;
+    converterPlaceholder: string;
   };
 };
 
@@ -216,6 +218,8 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlJsonSchema: "JSON Schema",
       jsonToModelddlZod: "Zod Schema",
       jsonToModelddlJava: "Java POJO klassi",
+      converter: "Umbreytir",
+      converterPlaceholder: "Sláðu inn gildi til að umbreyta",
 
     },
   },
@@ -355,6 +359,8 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlJsonSchema: "JSON Schema",
       jsonToModelddlZod: "Zod Schema",
       jsonToModelddlJava: "POJO Java Class",
+      converter: "Converter",
+      converterPlaceholder: "Enter value to convert",
     },
   },
 };
