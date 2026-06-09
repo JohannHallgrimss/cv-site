@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-left">
         <strong>Jóhann Hallgrímsson</strong>
-        <span className="footer-phone">{t.home.phone}</span>
+        <span className="footer-phone">611 4748</span>
         <a className="footer-email" href="mailto:joh@mi.is">joh@mi.is</a>
       </div>
 

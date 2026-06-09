@@ -69,7 +69,7 @@ export default function ContactMe() {
           <textarea className="large-textarea" value={message} onChange={(e) => setMessage(e.target.value)} />
 
           <button onClick={handleSend} disabled={status === "sending"}>
-            {status === "sending" ? "SENDING..." : cp.sendButton}
+            {status === "sending" ?  cp.sending : cp.sendButton}
           </button>
 
           {status === "error" && <div className="error">{cp.errorMessage}</div>}

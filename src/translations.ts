@@ -18,6 +18,7 @@ export type Translations = {
     sendButton: string;
     thankYouMessage: string;
     errorMessage: string;
+    sending: string;
   };
   home: {
     personalTitle: string;
@@ -241,6 +242,7 @@ export const translations: Record<Language, Translations> = {
       sendButton: "Senda",
       thankYouMessage: "Takk fyrir, ég hef samband við þig við fyrsta tækifæri.",
       errorMessage: "Villa við að senda tölvupóst. Reyndu aftur síðar.",
+      sending: "Sendi",
     },
   },
   en: {
@@ -391,6 +393,7 @@ export const translations: Record<Language, Translations> = {
       sendButton: "Send",
       thankYouMessage: "Thank you, I will get in touch with you as soon as possible.",
       errorMessage: "Error sending email. Please try again later.",
+      sending: "Sending",
     },
   },
 };
