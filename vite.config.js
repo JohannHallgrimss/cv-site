@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/cv-site/',
+  // Use a production base for GH Pages, but '/' during dev so Vite HMR/ping works correctly
+  base: mode === 'production' ? '/cv-site/' : '/',
   build: {
     rollupOptions: {
       output: {
@@ -18,4 +19,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))
