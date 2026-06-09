@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import LazyMotion from "../components/LazyMotion";
 import type { Translations } from "../translations";
 
 type HomeProps = {
@@ -7,8 +7,23 @@ type HomeProps = {
 
 export default function Home({ t }: HomeProps) {
   return (
-    <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
-      <img src="profile.jpg" alt="Profile" className="profile" />
+    <LazyMotion className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
+      <picture>
+        <source
+          type="image/webp"
+          srcSet="/profile-320.webp 320w, /profile-640.webp 640w, /profile-1024.webp 1024w"
+        />
+        <img
+          src="/profile-640.jpg"
+          srcSet="/profile-320.jpg 320w, /profile-640.jpg 640w, /profile-1024.jpg 1024w"
+          sizes="(max-width: 640px) 320px, 200px"
+          width={200}
+          height={200}
+          loading="lazy"
+          alt="Profile"
+          className="profile"
+        />
+      </picture>
 
       <h2>{t.personalTitle}</h2>
       <p>{t.phone}</p>
@@ -31,6 +46,6 @@ export default function Home({ t }: HomeProps) {
           <span> {t.linkedIn}</span>
         </a>
       </div>
-    </motion.div>
+    </LazyMotion>
   );
 }

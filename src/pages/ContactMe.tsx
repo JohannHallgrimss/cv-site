@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "../hooks/useTranslation";
 import emailjs from "@emailjs/browser";
+import LazyMotion from "../components/LazyMotion";
 
 export default function ContactMe() {
   const { t } = useTranslation();
@@ -11,11 +12,6 @@ export default function ContactMe() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  // Read EmailJS IDs from Vite env variables. Create a `.env.local` with these keys:
-  // VITE_EMAILJS_SERVICE_ID=service_xxx
-  // VITE_EMAILJS_TEMPLATE_ID=template_xxx
-  // VITE_EMAILJS_PUBLIC_KEY=public_xxx
-  // (Restart dev server after editing env files)
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "";
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "";
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "";
@@ -50,7 +46,7 @@ export default function ContactMe() {
   }
 
   return (
-    <div className="card" style={{ marginBottom: 120 }}>
+    <LazyMotion className="card" style={{ marginBottom: 120 }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
       <h2>{cp.title}</h2>
 
       {status === "sent" ? (
@@ -75,6 +71,6 @@ export default function ContactMe() {
           {status === "error" && <div className="error">{cp.errorMessage}</div>}
         </div>
       )}
-    </div>
+    </LazyMotion>
   );
 }
