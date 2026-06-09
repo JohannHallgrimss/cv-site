@@ -22,6 +22,52 @@ header {
   z-index: 100;
 }
 
+/* Footer: styled similarly to header but fixed to bottom */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(240,255,255,0.95);
+  box-shadow: 0 -6px 8px -6px #1d4ed8;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Footer content layout */
+.footer-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.footer-phone {
+  color: inherit;
+}
+.footer-email {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Hide footer links on small screens (mobile) */
+@media (max-width: 640px) {
+  .footer-links {
+    display: none;
+  }
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .brand-row {
   display: flex;
   align-items: center;

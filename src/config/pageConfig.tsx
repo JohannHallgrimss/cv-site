@@ -4,6 +4,7 @@ import Knowledge from "../pages/Knowledge";
 import Experience from "../pages/Experience";
 import References from "../pages/References";
 import WebTools from "../pages/WebTools";
+import ContactMe from "../pages/ContactMe";
 import type { Translations } from "../translations";
 
 export type PageConfig = {
@@ -44,6 +45,12 @@ export function createPages(t: Translations): PageConfig[] {
       path: "/web-tools",
       label: "webTools",
       component: <WebTools t={t.webTools} />,
+    },
+    {
+      id: "contact",
+      path: "/contact",
+      label: "contactMe",
+      component: <ContactMe />,
     },
   ];
 }

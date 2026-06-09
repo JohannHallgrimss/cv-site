@@ -7,7 +7,17 @@ export type Translations = {
     knowledge: string;
     experience: string;
     references: string;
+    contactMe: string;
     webTools: string;
+  };
+  contactMe: {
+    title: string;
+    nameLabel: string;
+    emailLabel: string;
+    messageLabel: string;
+    sendButton: string;
+    thankYouMessage: string;
+    errorMessage: string;
   };
   home: {
     personalTitle: string;
@@ -87,6 +97,7 @@ export const translations: Record<Language, Translations> = {
       knowledge: "Þekking",
       experience: "Starfsreynsla",
       references: "Meðmælendur",
+      contactMe: "Hafa samband",
       webTools: "Vef verkfæri",
     },
     home: {
@@ -222,6 +233,15 @@ export const translations: Record<Language, Translations> = {
       converterPlaceholder: "Sláðu inn gildi til að umbreyta",
 
     },
+    contactMe: {
+      title: "Hafa samband",
+      nameLabel: "Nafn",
+      emailLabel: "Netfang",
+      messageLabel: "Skilaboð",
+      sendButton: "Senda",
+      thankYouMessage: "Takk fyrir, ég hef samband við þig við fyrsta tækifæri.",
+      errorMessage: "Villa við að senda tölvupóst. Reyndu aftur síðar.",
+    },
   },
   en: {
     nav: {
@@ -229,6 +249,7 @@ export const translations: Record<Language, Translations> = {
       knowledge: "Knowledge",
       experience: "Experience",
       references: "References",
+      contactMe: "Contact",
       webTools: "Web Tools",
     },
     home: {
@@ -361,6 +382,15 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlJava: "POJO Java Class",
       converter: "Converter",
       converterPlaceholder: "Enter value to convert",
+    },
+    contactMe: {
+      title: "Contact",
+      nameLabel: "Name",
+      emailLabel: "Email",
+      messageLabel: "Message",
+      sendButton: "Send",
+      thankYouMessage: "Thank you, I will get in touch with you as soon as possible.",
+      errorMessage: "Error sending email. Please try again later.",
     },
   },
 };

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "./hooks/useTranslation";
 import { useTheme } from "./contexts/ThemeContext";
 import { createPages, type PageConfig } from "./config/pageConfig";
+import Footer from "./components/Footer";
 
 const WEB_TOOLS = [
   { id: "all", label: "title" },
@@ -213,6 +214,7 @@ export default function App() {
       <div className="container">
         <PageRoutes pages={pages} />
       </div>
+      <Footer />
     </HashRouter>
   );
 }
