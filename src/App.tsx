@@ -72,7 +72,9 @@ export default function App() {
     <HashRouter>
       <header className="header">
         <div className="brand-row">
-          <strong>Jóhann Hallgrímsson</strong>
+          <a href="/">
+            <strong>Jóhann Hallgrímsson</strong>
+          </a>
           <div className="controls">
             <button className="theme-toggle" onClick={toggleDarkMode} title={isDarkMode ? "Light mode" : "Dark mode"}>
               {isDarkMode ? <SunIcon width={20} /> : <MoonIcon width={20} />}
