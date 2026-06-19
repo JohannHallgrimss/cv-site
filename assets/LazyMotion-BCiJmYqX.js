@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/vendor.motion-tw3TSuMs.js","assets/vendor.react-Dq2IXbVu.js","assets/vendor-DMXNFKkd.js"])))=>i.map(i=>d[i]);
+import{_ as i}from"./index-C26MXhXD.js";import{j as o,r as s,i as a}from"./vendor.react-Dq2IXbVu.js";const n=a.lazy(async()=>{const t=await i(()=>import("./vendor.motion-tw3TSuMs.js"),__vite__mapDeps([0,1,2]));return{default:({children:e,...r})=>a.createElement(t.motion.div,r,e)}});function _(t){return o.jsx(s.Suspense,{fallback:o.jsx("div",{...t}),children:o.jsx(n,{...t})})}export{_ as L};
