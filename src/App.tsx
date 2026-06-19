@@ -72,7 +72,7 @@ export default function App() {
     <HashRouter>
       <header className="header">
         <div className="brand-row">
-          <a href="/">
+          <a href="/cv-site">
             <strong>Jóhann Hallgrímsson</strong>
           </a>
           <div className="controls">

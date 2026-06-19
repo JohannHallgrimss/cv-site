@@ -380,7 +380,7 @@ html.dark-mode .nav-submenu-trigger {
 
 .tool-section input,
 .tool-section textarea {
-  width: 100%;
+  width: stretch;
   padding: 8px;
   margin-bottom: 8px;
   border: 1px solid #d1d5db;
