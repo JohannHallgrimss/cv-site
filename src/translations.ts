@@ -115,6 +115,7 @@ export const translations: Record<Language, Translations> = {
     knowledge: {
       educationTitle: "Menntun",
       educationItems: [
+        "2016 Claud AI námskeið - Hönnun og forritun á og með Gervigreind, CCA-F",
         "2009 Háskólinn í Reykjavík, B.Sc. í Tölvunarfræði",
         "2007 Háskólinn í Reykjavík, Kerfisfræði",
         "2003 Nýi Tölvu- og viðskiptaskólinn, diplóma í MCP (Microsoft Certified Professional) og MCSE (Microsoft Certified Systems Engineer)",
@@ -268,6 +269,7 @@ export const translations: Record<Language, Translations> = {
     knowledge: {
       educationTitle: "Education",
       educationItems: [
+        "2016 Claud AI course - Design and programming with and of Artificial Intelligence, CCA-F",
         "2009 University of Reykjavík, B.Sc. in Computer Science",
         "2007 University of Reykjavík, Systems Engineering",
         "2003 New Computer and Business School, diploma in MCP (Microsoft Certified Professional) and MCSE (Microsoft Certified Systems Engineer)",
