@@ -36,6 +36,8 @@ export type Translations = {
     skillsTitle: string;
     skills: string[];
     summaryText: string;
+    certificatesTitle: string;
+    certificates: Array<{ label: string; file: string }>;
   };
   experience: {
     title: string;
@@ -125,6 +127,13 @@ export const translations: Record<Language, Translations> = {
       skills: [".NET / C#", "React", "SQL", "Azure"],
       summaryText:
         "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
+      certificatesTitle: "Skírteini og vottanir",
+      certificates: [
+        { label: "Introduction to Model Context Protocol", file: "certificate-eaq55n24w53i-1779989620.pdf" },
+        { label: "Introduction to Agent Skills", file: "certificate-h4adrawvhpyr-1779453886.pdf" },
+        { label: "Claude with the Anthropic API", file: "certificate-isfne7owfqf8-1779977826.pdf" },
+        { label: "Introduction to Model Context Protocol", file: "certificate-etv9cagd95uu-1780056525.pdf" },
+      ],
     },
     experience: {
       title: "Starfsreynsla",
@@ -279,6 +288,13 @@ export const translations: Record<Language, Translations> = {
       skills: [".NET / C#", "React", "SQL", "Azure"],
       summaryText:
         "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
+      certificatesTitle: "Certificates",
+      certificates: [
+        { label: "Introduction to Model Context Protocol", file: "certificate-eaq55n24w53i-1779989620.pdf" },
+        { label: "Introduction to Agent Skills", file: "certificate-h4adrawvhpyr-1779453886.pdf" },
+        { label: "Claude with the Anthropic API", file: "certificate-isfne7owfqf8-1779977826.pdf" },
+        { label: "Introduction to Model Context Protocol", file: "certificate-etv9cagd95uu-1780056525.pdf" },
+      ],
     },
     experience: {
       title: "Experience",

@@ -6,6 +6,8 @@ type KnowledgeProps = {
 };
 
 export default function Knowledge({ t }: KnowledgeProps) {
+  const base = import.meta.env.BASE_URL || "/";
+
   return (
     <motion.div className="card" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}>
       <h2>{t.educationTitle}</h2>
@@ -14,6 +16,7 @@ export default function Knowledge({ t }: KnowledgeProps) {
           <li key={item}>{item}</li>
         ))}
       </ul>
+
       <h2>{t.skillsTitle}</h2>
       <ul>
         {t.skills.map((skill) => (
@@ -21,6 +24,27 @@ export default function Knowledge({ t }: KnowledgeProps) {
         ))}
       </ul>
       <p>{t.summaryText}</p>
+
+      <div className="certificate-section">
+        <h3>{t.certificatesTitle}</h3>
+        <div className="certificate-list">
+          {t.certificates.map((certificate) => (
+            <a
+              key={certificate.file}
+              href={`${base}${certificate.file}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-card"
+            >
+              <span className="certificate-icon">📄</span>
+              <span className="certificate-text">
+                <strong>{certificate.label}</strong>
+                <small>Open PDF</small>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
     </motion.div>
   );
 }

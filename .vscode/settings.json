@@ -1,0 +1,6 @@
+{
+  "workbench.startupEditor": "none",
+  "files.autoSave": "onFocusChange",
+  "browser-preview.startupUrl": "http://localhost:5173",
+  "livePreview.defaultPreviewPath": "http://localhost:5173"
+}
