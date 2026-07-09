@@ -124,9 +124,9 @@ export const translations: Record<Language, Translations> = {
         "2001 Fjölbrautaskólinn í Breiðholti, stúdent",
       ],
       skillsTitle: "Hæfni",
-      skills: [".NET / C#", "React", "SQL", "Azure"],
+      skills: [".NET / C#", "React", "SQL", "Azure", "Gervigreind / AI"],
       summaryText:
-        "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
+        "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, Hönnun og smíði með og á gervigreind, JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
       certificatesTitle: "Skírteini og vottanir",
       certificates: [
         { label: "Introduction to Model Context Protocol", file: "certificate-eaq55n24w53i-1779989620.pdf" },
@@ -285,9 +285,9 @@ export const translations: Record<Language, Translations> = {
         "2001 Breiðholt College, high school diploma",
       ],
       skillsTitle: "Skills",
-      skills: [".NET / C#", "React", "SQL", "Azure"],
+      skills: [".NET / C#", "React", "SQL", "Azure", "Gervigreind / AI"],
       summaryText:
-        "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
+        "C#, .NET Core, ASP.NET, REST APIs, Entity Framework, MS SQL Server, PostgreSQL, Design and programming with and of Artificial Intelligence,  JavaScript, TypeScript, HTML, CSS, Angular, React, Microsoft Graph API, Google Cloud APIs, Azure AD, Agile/Scrum",
       certificatesTitle: "Certificates",
       certificates: [
         { label: "Introduction to Model Context Protocol", file: "certificate-eaq55n24w53i-1779989620.pdf" },
