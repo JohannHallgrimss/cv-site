@@ -1138,3 +1138,37 @@ html.dark-mode a {
   }
 }
 
+/* Family tree layout */
+.tree-graph-shell {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  overflow: auto;
+}
+
+.tree-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 900px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tree-level {
+  position: absolute;
+  inset: 0;
+}
+
+.tree-node {
+  position: absolute;
+  width: 140px;
+  height: 60px;
+  z-index: 2;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
