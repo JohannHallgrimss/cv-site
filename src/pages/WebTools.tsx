@@ -8,6 +8,7 @@ import DateParser from "./webTools/DateParser";
 import LinqDemo from "./webTools/LinqDemo";
 import JsonToModel from "./webTools/JsonToModel";
 import Converter from "./webTools/Converter";
+import CsvToJson from "./webTools/CsvToJson";
 
 import {
   AccordionItem,
@@ -25,7 +26,8 @@ const TOOL_INDEX_MAP: Record<string, number> = {
   dateParser: 3,
   linqDemo: 4,
   jsonToModel: 5,
-  converter: 6,
+  csvToJson: 6,
+  converter: 7,
 };
 
 export default function WebTools({
@@ -100,9 +102,17 @@ export default function WebTools({
       </AccordionItem>
 
       <AccordionItem
-        title={t.converter}
+        title={t.csvToJson}
         isOpen={openIndex === 6}
         onClick={() => toggle(6)}
+      >
+        <CsvToJson t={t} />
+      </AccordionItem>
+
+      <AccordionItem
+        title={t.converter}
+        isOpen={openIndex === 7}
+        onClick={() => toggle(7)}
       >
         <Converter t={t} />
       </AccordionItem>

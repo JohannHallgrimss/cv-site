@@ -88,6 +88,13 @@ export type Translations = {
     jsonToModelddlJsonSchema: string;
     jsonToModelddlZod: string;  
     jsonToModelddlJava: string;
+    csvToJson: string;
+    csvToJsonHint: string;
+    csvToJsonPlaceholder: string;
+    csvToJsonOutput: string;
+    csvToJsonCopy: string;
+    csvToJsonCopied: string;
+    csvToJsonInvalid: string;
     converter: string;
     converterPlaceholder: string;
   };
@@ -240,6 +247,13 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlJsonSchema: "JSON Schema",
       jsonToModelddlZod: "Zod Schema",
       jsonToModelddlJava: "Java POJO klassi",
+      csvToJson: "CSV í JSON",
+      csvToJsonHint: "Límdu CSV texta með , eða ; sem aðskiljara.",
+      csvToJsonPlaceholder: "Límdu CSV hér",
+      csvToJsonOutput: "JSON úttak",
+      csvToJsonCopy: "Afrita JSON",
+      csvToJsonCopied: "JSON afritað í klippiborð",
+      csvToJsonInvalid: "❌ Ógilt CSV inntak",
       converter: "Umbreytir",
       converterPlaceholder: "Sláðu inn gildi til að umbreyta",
 
@@ -400,6 +414,13 @@ export const translations: Record<Language, Translations> = {
       jsonToModelddlJsonSchema: "JSON Schema",
       jsonToModelddlZod: "Zod Schema",
       jsonToModelddlJava: "POJO Java Class",
+      csvToJson: "CSV to JSON",
+      csvToJsonHint: "Paste CSV text with comma or semicolon separators.",
+      csvToJsonPlaceholder: "Paste CSV here",
+      csvToJsonOutput: "JSON Output",
+      csvToJsonCopy: "Copy JSON",
+      csvToJsonCopied: "JSON copied to clipboard",
+      csvToJsonInvalid: "❌ Invalid CSV input",
       converter: "Converter",
       converterPlaceholder: "Enter value to convert",
     },

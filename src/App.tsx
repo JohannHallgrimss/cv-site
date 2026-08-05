@@ -15,6 +15,7 @@ const WEB_TOOLS = [
   { id: "dateParser", label: "dateParser" },
   { id: "linqDemo", label: "linqDemo" },
   { id: "jsonToModel", label: "jsonToModel" },
+  { id: "csvToJson", label: "csvToJson" },
   { id: "converter", label: "converter" },
 ];
 
