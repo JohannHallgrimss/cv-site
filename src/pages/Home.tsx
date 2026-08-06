@@ -19,8 +19,8 @@ export default function Home({ t }: HomeProps) {
       />
 
       <h2>{t.personalTitle}</h2>
-      <p>{t.phone}</p>
       <p>{t.email}</p>
+      <p>{t.phone}</p>
 
       <h2>{t.summaryTitle}</h2>
       <p>{t.summaryText}</p>
