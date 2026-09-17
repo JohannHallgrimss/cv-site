@@ -140,6 +140,7 @@ export const translations: Record<Language, Translations> = {
         { label: "Introduction to Agent Skills", file: "certificate-h4adrawvhpyr-1779453886.pdf" },
         { label: "Claude with the Anthropic API", file: "certificate-isfne7owfqf8-1779977826.pdf" },
         { label: "Introduction to Model Context Protocol", file: "certificate-etv9cagd95uu-1780056525.pdf" },
+        { label: "Microsoft certified systems engineer", file: "https://learn.microsoft.com/en-us/users/johannhallgrimsson-2013/transcript/d84k0br3ep2pkzp?utm_source=chatgpt.com&source=docs" },
       ],
     },
     experience: {
@@ -308,6 +309,7 @@ export const translations: Record<Language, Translations> = {
         { label: "Introduction to Agent Skills", file: "certificate-h4adrawvhpyr-1779453886.pdf" },
         { label: "Claude with the Anthropic API", file: "certificate-isfne7owfqf8-1779977826.pdf" },
         { label: "Introduction to Model Context Protocol", file: "certificate-etv9cagd95uu-1780056525.pdf" },
+        { label: "Microsoft Certified Systems Engineer", file: "https://learn.microsoft.com/en-us/users/johannhallgrimsson-2013/transcript/d84k0br3ep2pkzp?utm_source=chatgpt.com&source=docs" },
       ],
     },
     experience: {

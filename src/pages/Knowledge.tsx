@@ -31,7 +31,7 @@ export default function Knowledge({ t }: KnowledgeProps) {
           {t.certificates.map((certificate) => (
             <a
               key={certificate.file}
-              href={`${base}${certificate.file}`}
+              href={certificate.file.startsWith("http") ? certificate.file : `${base}${certificate.file}`}
               target="_blank"
               rel="noopener noreferrer"
               className="certificate-card"
